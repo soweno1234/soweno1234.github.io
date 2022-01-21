@@ -25,7 +25,7 @@ while (continueGame == "y") {
     //choose the path
     if (playerChoice === goodPath) {
         alert("Luckily you chose the good path. On this path, monsters will do less damage and you will have a better chance to survive.")
-        let monsterAttack = Number(prompt("You have been walking for hours, and you encounter a 7 foot tall monster with teeth as sharp as knives. You have 100 hitpoints. Do you choose to run (1) or stay and fight (2)?"))
+        let monsterAttack = Number(prompt("You have been walking for hours, and you encounter a 7 foot tall monster with teeth as sharp as knives. You have 100 hitpoints. Do you choose to run (1) or stay and fight (2)?"));
         if (monsterAttack == 1) {
             alert("You run away, only to encounter a 300 foot cliff. You realize that fighting the monster is your only option, so you run back to it.");
 
@@ -36,7 +36,7 @@ while (continueGame == "y") {
         //MONSTER FIGHT SCENE 1
         let fightChoice = Number(prompt("You prepare to face the monster. It has 100 hit points as do you. Do you want to strike its side (1) or body (2)?"));
         let goodFightChoice = Math.floor(Math.random() * 2) + 1;
-        if (fightChoice === goodFightChoice) {
+        if (fightChoice == goodFightChoice) {
             let playerDmg = Math.floor(Math.random() * 21) + 60;
             monsterHealth = 100 - playerDmg;
             alert("you attack the monster and do a HUGE amount of damage! You deal " + playerDmg + "damage and the monster is left with " + 100 - playerDmg + "health.")
