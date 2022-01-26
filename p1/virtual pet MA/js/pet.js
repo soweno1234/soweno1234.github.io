@@ -3,6 +3,7 @@ let belly = 0;
 let happiness = 0;
 
 function feedPet() {
+    console.log("test");
     //this function will make the pet less hungry by giving it food. as the belly gets more emtpy, so will the happiness
 }
 
