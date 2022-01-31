@@ -12,7 +12,7 @@
     <div style="text-align:center;">
         <h1>Welcome to the virtual pet game!</h1>
         <h3>Feed and play with the Donald the dog to keep him happy!</h3>
-        <img src="images/happy-dog.png" alt="Happy Dog" style="width:400px; height:250px;">
+        <img id="pet-img" src="images/happy-dog.png" alt="Happy Dog" style="width:400px; height:250px;">
     </div>
     <div style="position:absolute; top:370px; left:390px;">
         <h1>Overall Happiness</h1>
@@ -21,14 +21,14 @@
     </div>
     <div style="position:absolute; top:525px; left:250px;">
         <h3>Donald's full belly</h3>
-        <meter id="belly-meter" min="0" max="10" value="7"></meter>
-        <p id="belly-paragraph">7</p>
+        <meter id="belly-meter" min="0" max="10" value="6"></meter>
+        <p id="belly-paragraph">6</p>
         <button id="belly-button" onclick="feedPet()">Feed me</button>
     </div>
     <div style="position:absolute; top: 525px; left:600px;">
         <h3>Donald's Interest Level</h3>
-        <meter id="interest-meter" min="0" max="10" value="7"></meter>
-        <p id="interest-paragraph">5</p>
+        <meter id="interest-meter" min="0" max="10" value="6"></meter>
+        <p id="interest-paragraph">6</p>
         <button id="interest-button" onclick="playPet()" ;>Play with me!</button>
     </div>
 

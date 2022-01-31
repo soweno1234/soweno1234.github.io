@@ -1,14 +1,71 @@
-let interest = 0;
-let belly = 0;
-let happiness = 0;
+let interest = 6;
+let belly = 6;
+let happiness = 6;
 
-function feedPet() {
-    console.log("this will increase the belly variable");
-    //this function will make the pet less hungry by giving it food. as the belly gets more emtpy, so will the happiness
+
+function refreshUI() {
+    let bellyMeter = document.getElementById("belly-meter");
+    bellyMeter.value = belly;
+
+    let bellyParagraph = document.getElementById("belly-paragraph");
+    bellyParagraph.innerHTML = belly;
+
+    let interestMeter = document.getElementById("interest-meter");
+    interestMeter.value = interest;
+
+    let interestParagraph = document.getElementById("interest-paragraph");
+    interestParagraph.innerHTML = interest;
+
+    //update dog image and paragraph
+    let petImg = document.getElementById("pet-img");
+    if (happiness = 1) {
+        petImg.src = ""
+
+    } else if (happiness = 2) {
+        petImg.src = ""
+    } else if (happiness = 3) {
+
+    } else if (happiness = 4) {
+
+    } else if (happiness = 5) {
+
+    }
+
+
 }
+
+
 
 function playPet() {
-    console.log("this will increase the interest level");
-    /*this function will make the player play games with the pet, and it will increase the pet's interest level. 
-    A combination of this and the hunger level both influence the overall happiness.*/
+    //increase the interest level
+    if (interest < 10) {
+        interest += 1;
+    }
+
+    refreshUI();
 }
+
+function feedPet() {
+    //increase the belly level
+    if (belly < 10) {
+        belly += 1;
+    }
+
+    refreshUI();
+}
+
+
+function decreasePet() {
+    if (belly > 0) {
+        refreshUI();
+        belly = belly - 1
+    }
+
+    if (interest > 0) {
+        refreshUI();
+        interest = interest - 1
+    }
+}
+
+
+setInterval(decreasePet, 1000);
