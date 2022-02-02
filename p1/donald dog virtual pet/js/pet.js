@@ -59,7 +59,7 @@ function refreshUI() {
         continueGame = prompt("Game over. Would you like to play again (y/n)?");
 
         if (continueGame === "y") {
-            restart()
+            restart();
         } else if (continueGame === "n") {
             alert("Thank you for playing!");
             document.getElementById("happy-button").disabled = true;
@@ -76,13 +76,13 @@ function refreshUI() {
     } else if (happy >= 35 && belly >= 16 || happy >= 35 && interest >= 7 || belly >= 16 && interest >= 7) {
         petImg.src = "images - Copy/happy-dog.png";
     } else if (happy >= 30 && belly >= 12 || happy >= 30 && interest >= 6 || belly >= 12 && interest >= 6) {
-        petImg.src = "images - Copy/somewhat-happy.png"
+        petImg.src = "images - Copy/somewhat-happy.png";
 
     } else if (happy >= 20 && belly >= 10 || happy >= 20 && interest >= 5 || belly >= 10 && interest >= 5) {
-        petImg.src = "images - Copy/bored.png"
+        petImg.src = "images - Copy/bored.png";
 
     } else if (happy >= 10 && belly >= 5 || happy >= 10 && interest >= 3 || belly >= 5 && interest >= 3) {
-        petImg.src = "images - Copy/sad.png"
+        petImg.src = "images - Copy/sad.png";
 
     } else if (happy >= 3 && belly >= 2 || happy >= 3 && interest >= 1 || belly >= 2 && interest >= 1) {
         petImg.src = "images - Copy/super-sad.png.png";
@@ -94,21 +94,21 @@ function refreshUI() {
 function decreasePet() {
     if (belly > 0) {
 
-        belly = belly - 1
+        belly = belly - 1;
         refreshUI();
     }
 
     if (interest > 0) {
 
-        interest = interest - .5
+        interest = interest - .5;
         refreshUI();
     }
 
     if (happy > 1) {
-        happy = happy - 2
+        happy = happy - 2;
         refreshUI();
     } else if (happy === 1) {
-        happy = happy - 1
+        happy = happy - 1;
         refreshUI();
     }
 }
@@ -141,11 +141,11 @@ function happyPet() {
     if (happy < 47) {
         happy += 4;
     } else if (happy = 47) {
-        happy += 3
+        happy += 3;
     } else if (happy = 48) {
-        happy += 2
+        happy += 2;
     } else if (happy = 49) {
-        happy += 1
+        happy += 1;
     }
 
     refreshUI();
