@@ -1,6 +1,7 @@
-let interest = 6;
-let belly = 6;
-let happiness = 6;
+let interest = 5;
+let belly = 10;
+let happy = 50;
+
 
 
 function refreshUI() {
@@ -10,11 +11,23 @@ function refreshUI() {
     let bellyParagraph = document.getElementById("belly-paragraph");
     bellyParagraph.innerHTML = belly;
 
+    //----------------------------------------------
+
     let interestMeter = document.getElementById("interest-meter");
     interestMeter.value = interest;
 
     let interestParagraph = document.getElementById("interest-paragraph");
     interestParagraph.innerHTML = interest;
+
+    //------------------------------------------------
+
+    let happyMeter = document.getElementById("happy-meter");
+    happyMeter.value = happy;
+
+    let happyParagraph = document.getElementById("happy-paragraph");
+    happyParagraph.innerHTML = happy;
+
+
 
     //update dog image and paragraph
     let petImg = document.getElementById("pet-img");
@@ -30,11 +43,35 @@ function refreshUI() {
     } else if (happiness = 5) {
 
     }
-
-
 }
 
 
+function decreasePet() {
+    if (belly > 0) {
+
+        belly = belly - 1
+        refreshUI();
+    }
+
+    if (interest > 0) {
+
+        interest = interest - 1
+        refreshUI();
+    }
+
+    if (interest > 0 && belly > 0) {
+        happy = (belly + interest) / 2
+        refreshUI();
+    }
+}
+
+function updateHappy() {
+    let happy = belly
+    refreshUI();
+}
+
+setInterval(decreasePet, 1000);
+setInterval(updateHappy, 1000);
 
 function playPet() {
     //increase the interest level
@@ -47,25 +84,9 @@ function playPet() {
 
 function feedPet() {
     //increase the belly level
-    if (belly < 10) {
-        belly += 1;
+    if (belly < 20) {
+        belly += 2;
     }
 
     refreshUI();
 }
-
-
-function decreasePet() {
-    if (belly > 0) {
-        refreshUI();
-        belly = belly - 1
-    }
-
-    if (interest > 0) {
-        refreshUI();
-        interest = interest - 1
-    }
-}
-
-
-setInterval(decreasePet, 1000);
