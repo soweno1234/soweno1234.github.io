@@ -31,16 +31,22 @@ function refreshUI() {
 
     //update dog image and paragraph
     let petImg = document.getElementById("pet-img");
-    if (happiness = 1) {
-        petImg.src = ""
+    if (belly >= 17 && interest >= 9) {
+        petImg.src = "images - Copy/super-happy.png";
 
-    } else if (happiness = 2) {
-        petImg.src = ""
-    } else if (happiness = 3) {
+    } else if (belly >= 14 && interest >= 8) {
+        petImg.src = "images - Copy/happy-dog.png";
+    } else if (belly >= 12 && interest >= 7) {
+        petImg.src = "images - Copy/somewhat-happy.png"
 
-    } else if (happiness = 4) {
+    } else if (belly >= 8 && interest >= 5) {
+        petImg.src = "images - Copy/bored.png"
 
-    } else if (happiness = 5) {
+    } else if (belly >= 4) {
+        petImg.src = "images - Copy/sad.png"
+
+    } else if (happy >= 3 && interest >= 1) {
+        petImg.src = "images - Copy/super-sad.png.png";
 
     }
 }
@@ -60,18 +66,13 @@ function decreasePet() {
     }
 
     if (interest > 0 && belly > 0) {
-        happy = (belly + interest) / 2
+        happy = Math.floor(((belly + interest) / 2) * 3)
         refreshUI();
     }
 }
 
-function updateHappy() {
-    let happy = belly
-    refreshUI();
-}
 
-setInterval(decreasePet, 1000);
-setInterval(updateHappy, 1000);
+
 
 function playPet() {
     //increase the interest level
@@ -84,9 +85,15 @@ function playPet() {
 
 function feedPet() {
     //increase the belly level
-    if (belly < 20) {
+    if (belly < 19) {
         belly += 2;
+    } else if (belly = 19) {
+        belly += 1;
+    } else if (belly > 19) {
+        belly = belly;
     }
 
     refreshUI();
 }
+setInterval(decreasePet, 1000);
+setInterval(updateHappy, 1000);
