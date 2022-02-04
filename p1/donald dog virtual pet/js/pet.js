@@ -88,6 +88,14 @@ function refreshUI() {
         petImg.src = "images - Copy/super-sad.png.png";
 
     }
+
+    function restart() {
+
+        interest = 5;
+        belly = 10;
+        happy = 25;
+        timer = 0;
+    }
 }
 
 
@@ -145,18 +153,10 @@ function happyPet() {
     } else if (happy = 48) {
         happy += 2;
     } else if (happy = 49) {
-        happy += 1;
+        happy += 1
     }
 
     refreshUI();
 }
 
 setInterval(decreasePet, 1000);
-
-function restart() {
-
-    interest = 5;
-    belly = 10;
-    happy = 25;
-    timer = 0;
-}
