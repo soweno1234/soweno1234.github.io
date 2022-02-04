@@ -43,9 +43,9 @@ ctx.arc(100, 50, 25, 0, 2 * Math.PI);
 ctx.strokeStyle = "red";
 ctx.stroke()
 
-for (let x = 25; x > 0; x = x - 5) {
+for (let radius = 25; radius > 0; radius = radius - 5) {
     ctx.beginPath();
-    ctx.arc(100, 50, x, 0, 2 * Math.PI);
+    ctx.arc(100, 50, radius, 0, 2 * Math.PI);
     ctx.strokeStyle = "red";
     ctx.stroke()
 }
