@@ -1,6 +1,7 @@
 // get canvas item
 let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
+let emoji = document.getElementById("emoji");
 
 //get paragraph items
 let keyDownOutput = document.getElementById("keydown-output");
@@ -22,6 +23,8 @@ let ballY = 100;
 let ballXDir = 8;
 let ballYDir = 8;
 const BALL_RADIUS = 20;
+const IMG_HEIGHT = 20
+const IMG_WIDTH = 20;
 
 
 
@@ -50,6 +53,10 @@ function drawBall() {
     ctx.beginPath();
     ctx.arc(ballX, ballY, BALL_RADIUS, 0, 2 * Math.PI);
     ctx.fill();
+}
+
+function drawImage() {
+    ctx.drawImage(emoji, ballX, ballY, IMG_WIDTH, IMG_HEIGHT);
 }
 
 function moveBall() {
@@ -86,8 +93,10 @@ function refreshUI() {
     movePlayer();
     drawPlayer();
     checkBallCollision();
-    drawBall();
+    //drawBall();
+
     moveBall();
+    drawImage();
 }
 
 // when key is pressed
@@ -97,13 +106,13 @@ function keyPressed(event) {
     keyDownOutput.innerHTML = "key down code: " + key;
 
     //move player
-    if (key === 37) {
+    if (key === 65) {
         playerXDir = -6;
-    } else if (key === 39) {
+    } else if (key === 68) {
         playerXDir = 6;
-    } else if (key === 38) {
+    } else if (key === 87) {
         playerYDir = -6;
-    } else if (key === 40) {
+    } else if (key === 83) {
         playerYDir = 6;
     }
 }
@@ -114,15 +123,15 @@ function keyReleased(event) {
     let keyRelease = event.keyCode;
     keyUpOutput.innerHTML = "key up code: " + keyRelease;
 
-    if (keyRelease === 37) {
+    if (keyRelease === 65) {
         playerXDir = 0;
-    } else if (keyRelease === 39) {
+    } else if (keyRelease === 68) {
         playerXDir = 0;
     }
 
-    if (keyRelease === 40) {
+    if (keyRelease === 87) {
         playerYDir = 0;
-    } else if (keyRelease === 38) {
+    } else if (keyRelease === 83) {
         playerYDir = 0;
     }
 }
