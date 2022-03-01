@@ -32,6 +32,7 @@ function drawPlayer() {
     ctx.fillRect(playerX, playerY, PADDLE_WIDTH, PADDLE_HEIGHT);
 }
 
+
 function movePlayer() {
     playerX += playerSpeed * playerXDir;
     playerY += playerSpeed * playerYDir;
@@ -67,6 +68,7 @@ function moveBall() {
 }
 
 function checkBallCollision() {
+
     //check vertical wall
     if ((ballY > 500 - BALL_RADIUS) || (ballY < 0 + BALL_RADIUS)) {
         ballYDir = ballYDir * -1
@@ -103,21 +105,21 @@ function refreshUI() {
 function keyPressed(event) {
     //get the actual key pressed
     let key = event.keyCode;
-    keyDownOutput.innerHTML = "key down code: " + key;
+
 
     //move player
     if (key === 65) {
-        playerXDir = -6;
+        playerX = playerX - 44
     } else if (key === 68) {
-        playerXDir = 6;
+        playerX = playerX + 44
     } else if (key === 87) {
-        playerYDir = -6;
+        playerY = playerY - 44
     } else if (key === 83) {
-        playerYDir = 6;
+        playerY = playerY + 44
     }
 }
 
-
+/*
 function keyReleased(event) {
     //get the actual key released
     let keyRelease = event.keyCode;
@@ -134,35 +136,12 @@ function keyReleased(event) {
     } else if (keyRelease === 83) {
         playerYDir = 0;
     }
-}
-
-
-let xPosition = 0;
-let yPosition = 0;
-let xSpeed = 1;
-let ySpeed = 1;
+}*/
 
 
 
 
-function moveHorizontal() {
-    //clear screen
-    ctx.clearRect(0, 0, 500, 500);
 
-    //draw rectangle at current position
-    ctx.fillRect(xPosition, 0, 20, 20);
-
-    //move the x position over by x pixels
-    xPosition += xSpeed;
-
-
-    //did I hit the wall? if so wrap around
-    if (xPosition >= 500) {
-        xSpeed *= -1;
-    } else if (xPosition <= 0) {
-        xSpeed *= -1;
-    }
-}
 
 
 
