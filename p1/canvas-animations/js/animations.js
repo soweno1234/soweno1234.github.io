@@ -1,7 +1,6 @@
 // get canvas item
 let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
-let emoji = document.getElementById("emoji");
 
 //get paragraph items
 let keyDownOutput = document.getElementById("keydown-output");
@@ -119,7 +118,7 @@ function keyPressed(event) {
     }
 }
 
-/*
+
 function keyReleased(event) {
     //get the actual key released
     let keyRelease = event.keyCode;
@@ -136,7 +135,7 @@ function keyReleased(event) {
     } else if (keyRelease === 83) {
         playerYDir = 0;
     }
-}*/
+}
 
 
 

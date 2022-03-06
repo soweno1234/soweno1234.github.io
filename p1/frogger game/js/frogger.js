@@ -2,51 +2,62 @@
 let continueGame = "y"
 let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
-let emoji = document.getElementById("emoji");
-
-//get paragraph items
-let keyDownOutput = document.getElementById("keydown-output");
-let keyUpOutput = document.getElementById("keyup-output");
 
 
-
-
+let rocketCar = document.getElementById("rocketCar");
+let rocketCar2 = document.getElementById("rocketCar2");
+let rocketCar3 = document.getElementById("rocketCar3");
+let policeCar = document.getElementById("policeCar");
+let policeCar2 = document.getElementById("policeCar2");
+let policeCar3 = document.getElementById("policeCar3");
+let truck = document.getElementById("truck");
+let truck2 = document.getElementById("truck2");
+let pinkCar = document.getElementById("pinkCar");
+let pinkCar2 = document.getElementById("pinkCar2");
+let pinkCar3 = document.getElementById("pinkCar3");
+let spiderman = document.getElementById("spiderman");
+let spiderman2 = document.getElementById("spiderman2");
+let spiderman3 = document.getElementById("spiderman3");
+let spiderman4 = document.getElementById("spiderman4");
 
 //player position and movement
 let playerX = 400;
 let playerY = 467;
+let playerOrientation = 1;
 const PLAYER_RADIUS = 20;
-
 
 
 function drawBases() {
     ctx.fillStyle = '#7F00FF';
-    ctx.fillRect(0, 445, 800, 250);
+    //ctx.fillRect(0, 445, 800, 250);
 
-    ctx.fillRect(0, 0, 800, 40);
+    //ctx.fillRect(0, 0, 800, 40);
 }
 
 
 function drawPlayer() {
-    //draw a filed circle at ballX and ballY
-    ctx.beginPath();
-    ctx.fillStyle = "#00FF00";
-    ctx.arc(playerX, playerY, PLAYER_RADIUS, 0, 2 * Math.PI);
-    ctx.fill();
+    if (playerOrientation === 1) {
+        ctx.drawImage(frogup, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 2) {
+        ctx.drawImage(frogdown, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 3) {
+        ctx.drawImage(frogright, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 4) {
+        ctx.drawImage(frogleft, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    }
 }
 
 function refreshUI() {
     ctx.clearRect(0, 0, 800, 800);
-    drawBases();
+    //  drawBases();
     drawPlayer();
-    //drawCars();
-    drawImage();
+    drawCars();
+    //oldDrawImage();
     moveCars();
     carCollision();
     frogCollision();
     playerCollision();
 }
-
 
 
 // when key is pressed
@@ -57,15 +68,24 @@ function keyPressed(event) {
 
     //move player
     if (key === 65) {
-        playerX = playerX - 20
+        playerX = playerX - 20;
+        playerOrientation = 4;
     } else if (key === 68) {
         playerX = playerX + 20
+        playerOrientation = 3;
+
     } else if (key === 87) {
         playerY = playerY - 80
+        playerOrientation = 1;
+
     } else if (key === 83) {
         playerY = playerY + 80
+        playerOrientation = 2;
+
     }
 }
+
+
 
 function playerCollision() {
     //edge check
@@ -79,305 +99,136 @@ function playerCollision() {
         playerY = 467
 
     }
-
-
 }
 
-let rocketCarWidth = 50;
-let rocketCarHeight = 50;
-let rocketCarX = 190;
-let rocketCarY = 360;
-
-let rocketCarWidth2 = 50;
-let rocketCarHeight2 = 50;
-let rocketCarX2 = 350;
-let rocketCarY2 = 360;
-
-let rocketCarWidth3 = 50;
-let rocketCarHeight3 = 50;
-let rocketCarX3 = 693;
-let rocketCarY3 = 360;
-
-let policeCarWidth = 60;
-let policeCarHeight = 50;
-let policeCarX = 30;
-let policeCarY = 280;
-
-let policeCarWidth2 = 60;
-let policeCarHeight2 = 50;
-let policeCarX2 = 400;
-let policeCarY2 = 280;
-
-let policeCarWidth3 = 60;
-let policeCarHeight3 = 50;
-let policeCarX3 = 700;
-let policeCarY3 = 280;
-
-let truckWidth = 110;
-let truckHeight = 37;
-let truckX = 300;
-let truckY = 206;
-
-let truckWidth2 = 110;
-let truckHeight2 = 37;
-let truckX2 = 590;
-let truckY2 = 206;
-
-let pinkCarWidth = 50;
-let pinkCarHeight = 50;
-let pinkCarX = 30;
-let pinkCarY = 120;
-
-let pinkCarWidth2 = 50;
-let pinkCarHeight2 = 50;
-let pinkCarX2 = 210;
-let pinkCarY2 = 120;
-
-let pinkCarWidth3 = 50;
-let pinkCarHeight3 = 50;
-let pinkCarX3 = 440;
-let pinkCarY3 = 120;
-
-let spidermanWidth = 60;
-let spidermanHeight = 50;
-let spidermanX = 30;
-let spidermanY = 40;
-
-let spidermanWidth2 = 60;
-let spidermanHeight2 = 50;
-let spidermanX2 = 200;
-let spidermanY2 = 40;
-
-let spidermanWidth3 = 60;
-let spidermanHeight3 = 50;
-let spidermanX3 = 388;
-let spidermanY3 = 40;
-
-let spidermanWidth4 = 60;
-let spidermanHeight4 = 50;
-let spidermanX4 = 700;
-let spidermanY4 = 40;
-
-
+let xPositions = [190, 350, 693, 30, 400, 700, 300, 590, 30, 210, 440, 80, 200, 388, 700];
+let yPositions = [360, 360, 360, 280, 280, 280, 206, 206, 120, 120, 120, 40, 40, 40, 40];
+let widths = [50, 50, 50, 60, 60, 60, 110, 110, 50, 50, 50, 60, 60, 60, 60];
+let heights = [50, 50, 50, 50, 50, 50, 37, 37, 50, 50, 50, 50, 50, 50, 50];
+let imageID = ["rocketCar", "rocketCar2", "rocketCar3", "policeCar", "policeCar2", "policeCar3", "truck", "truck2", "pinkCar", "pinkCar2", "pinkCar3", "spiderman", "spiderman2", "spiderman3", "spiderman4"];
+let carSpeed = [1, 1, 1, 1.5, 1.5, 1.5, 1, 1, 1.2, 1.2, 1.2, .8, .8, .8, .8];
+let collisionDistance = [790, 790, 790, 775, 775, 775, 735, 735, 790, 790, 790, 775, 775, 775, 775];
 
 function drawCars() {
-
-    ctx.fillRect(rocketCarX, rocketCarY, rocketCarWidth, rocketCarHeight);
-    ctx.fillRect(rocketCarX2, rocketCarY, rocketCarWidth2, rocketCarHeight2);
-    ctx.fillRect(rocketCarX3, rocketCarY, rocketCarWidth3, rocketCarHeight3);
-    ctx.fillRect(policeCarX, policeCarY, policeCarWidth, policeCarHeight);
-    ctx.fillRect(policeCarX2, policeCarY2, policeCarWidth2, policeCarHeight2);
-    ctx.fillRect(policeCarX3, policeCarY3, policeCarWidth3, policeCarHeight3);
-    ctx.fillRect(truckX, truckY, truckWidth, truckHeight);
-    ctx.fillRect(truckX2, truckY2, truckWidth2, truckHeight2);
-    ctx.fillRect(pinkCarX, pinkCarY, pinkCarWidth, pinkCarHeight);
-    ctx.fillRect(pinkCarX2, pinkCarY2, pinkCarWidth2, pinkCarHeight2);
-    ctx.fillRect(pinkCarX3, pinkCarY3, pinkCarWidth3, pinkCarHeight3);
-    ctx.fillRect(spidermanX, spidermanY, spidermanWidth, spidermanHeight);
-    ctx.fillRect(spidermanX2, spidermanY2, spidermanWidth2, spidermanHeight2);
-    ctx.fillRect(spidermanX3, spidermanY3, spidermanWidth3, spidermanHeight3);
-
+    for (let i = 0; i < xPositions.length; i++) {
+        ctx.drawImage(document.getElementById(imageID[i]), xPositions[i], yPositions[i], widths[i], heights[i]);
+    }
 }
-
-
-function drawImage() {
-    ctx.drawImage(rocketCar, rocketCarX, rocketCarY, rocketCarWidth, rocketCarHeight);
-    ctx.drawImage(rocketCar2, rocketCarX2, rocketCarY2, rocketCarWidth2, rocketCarHeight2);
-    ctx.drawImage(rocketCar3, rocketCarX3, rocketCarY3, rocketCarWidth3, rocketCarHeight3);
-    ctx.drawImage(policeCar, policeCarX, policeCarY, policeCarWidth, policeCarHeight);
-    ctx.drawImage(policeCar2, policeCarX2, policeCarY2, policeCarWidth2, policeCarHeight2);
-    ctx.drawImage(policeCar3, policeCarX3, policeCarY3, policeCarWidth3, policeCarHeight3);
-
-    ctx.drawImage(truck, truckX, truckY, truckWidth, truckHeight);
-    ctx.drawImage(truck2, truckX2, truckY2, truckWidth2, truckHeight2);
-    ctx.drawImage(pinkCar, pinkCarX, pinkCarY, pinkCarWidth, pinkCarHeight);
-    ctx.drawImage(pinkCar2, pinkCarX2, pinkCarY2, pinkCarWidth2, pinkCarHeight2);
-    ctx.drawImage(pinkCar3, pinkCarX3, pinkCarY3, pinkCarWidth3, pinkCarHeight3);
-    ctx.drawImage(spiderman, spidermanX, spidermanY, spidermanWidth, spidermanHeight);
-    ctx.drawImage(spiderman2, spidermanX2, spidermanY2, spidermanWidth2, spidermanHeight2);
-    ctx.drawImage(spiderman3, spidermanX3, spidermanY3, spidermanWidth3, spidermanHeight3);
-    ctx.drawImage(spiderman4, spidermanX4, spidermanY4, spidermanWidth4, spidermanHeight4);
-}
-
 
 function moveCars() {
-    rocketCarX = rocketCarX + 1.2
-    rocketCarX2 = rocketCarX2 + 1.2
-    rocketCarX3 = rocketCarX3 + 1.2
-    policeCarX = policeCarX + 1.5
-    policeCarX2 = policeCarX2 + 1.5
-    policeCarX3 = policeCarX3 + 1.5
-    truckX = truckX + 1
-    truckX2 = truckX2 + 1
-    pinkCarX = pinkCarX + 1.5
-    pinkCarX2 = pinkCarX2 + 1.5
-    pinkCarX3 = pinkCarX3 + 1.5
-    spidermanX = spidermanX + .8
-    spidermanX2 = spidermanX2 + .8
-    spidermanX3 = spidermanX3 + .8
-    spidermanX4 = spidermanX4 + .8
+    for (let i = 0; i < xPositions.length; i++) {
+        xPositions[i] = xPositions[i] + carSpeed[i];
+    }
 }
 
 function carCollision() {
-    if (rocketCarX > 790 + rocketCarWidth) {
-        rocketCarX = 0 - rocketCarWidth;
-    }
-
-    if (rocketCarX2 > 790 + rocketCarWidth2) {
-        rocketCarX2 = 0 - rocketCarWidth2;
-    }
-
-    if (rocketCarX3 > 790 + rocketCarWidth3) {
-        rocketCarX3 = 0 - rocketCarWidth3;
-    }
-
-    if (policeCarX > 775 + policeCarWidth) {
-        policeCarX = 0 - policeCarWidth;
-    }
-
-    if (policeCarX2 > 775 + policeCarWidth2) {
-        policeCarX2 = 0 - policeCarWidth2;
-    }
-
-    if (policeCarX3 > 775 + policeCarWidth3) {
-        policeCarX3 = 0 - policeCarWidth3;
-    }
-    if (truckX > 735 + truckWidth) {
-        truckX = 15 - truckWidth;
-    }
-    if (truckX2 > 735 + truckWidth2) {
-        truckX2 = 15 - truckWidth2
-    }
-    if (pinkCarX > 790 + pinkCarWidth) {
-        pinkCarX = 0 - pinkCarWidth;
-    }
-    if (pinkCarX2 > 790 + pinkCarWidth2) {
-        pinkCarX2 = 0 - pinkCarWidth2;
-    }
-    if (pinkCarX3 > 790 + pinkCarWidth3) {
-        pinkCarX3 = 0 - pinkCarWidth3;
-    }
-    if (spidermanX > 775 + spidermanWidth) {
-        spidermanX = 0 - spidermanWidth;
-    }
-    if (spidermanX2 > 775 + spidermanWidth2) {
-        spidermanX2 = 0 - spidermanWidth2;
-    }
-    if (spidermanX3 > 775 + spidermanWidth3) {
-        spidermanX3 = 0 - spidermanWidth3;
-    }
-    if (spidermanX4 > 775 + spidermanWidth4) {
-        spidermanX4 = 0 - spidermanWidth4;
+    for (let i = 0; i < xPositions.length; i++) {
+        if (xPositions[i] > collisionDistance[i] + widths[i]) {
+            xPositions[i] = 0 - widths[i]
+        }
     }
 }
 
 function frogCollision() {
 
-
-    if (rocketCarX + 60 >= playerX - PLAYER_RADIUS / 2 &&
-        rocketCarX - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        rocketCarY + 20 >= playerY - PLAYER_RADIUS / 2 &&
-        rocketCarY - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[0] + 60 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[0] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[0] + 20 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[0] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
 
-    if (rocketCarX2 + 60 >= playerX - PLAYER_RADIUS / 2 &&
-        rocketCarX2 - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        rocketCarY2 + 20 >= playerY - PLAYER_RADIUS / 2 &&
-        rocketCarY2 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[1] + 60 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[1] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[1] + 20 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[1] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (rocketCarX3 + 60 >= playerX - PLAYER_RADIUS / 2 &&
-        rocketCarX3 - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        rocketCarY3 + 20 >= playerY - PLAYER_RADIUS / 2 &&
-        rocketCarY3 - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
-    }
-
-
-    if (policeCarX + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        policeCarX - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        policeCarY + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        policeCarY - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
-    }
-    if (policeCarX2 + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        policeCarX2 - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        policeCarY2 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        policeCarY2 - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
-    }
-    if (policeCarX3 + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        policeCarX3 - 10 <= playerX + PLAYER_RADIUS / 2 &&
-        policeCarY3 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        policeCarY3 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[2] + 60 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[2] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[2] + 20 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[2] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
 
-    if (truckX + 117 >= playerX - PLAYER_RADIUS / 2 &&
-        truckX - 12 <= playerX + PLAYER_RADIUS / 2 &&
-        truckY + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        truckY - 20 <= playerY + PLAYER_RADIUS / 2) {
+
+    if (xPositions[3] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[3] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[3] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[3] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (truckX2 + 115 >= playerX - PLAYER_RADIUS / 2 &&
-        truckX2 - 12 <= playerX + PLAYER_RADIUS / 2 &&
-        truckY2 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        truckY2 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[4] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[4] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[4] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[4] - 20 <= playerY + PLAYER_RADIUS / 2) {
+        playerY = 467;
+    }
+    if (xPositions[5] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[5] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[5] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[5] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
 
-    if (pinkCarX + 62 >= playerX - PLAYER_RADIUS / 2 &&
-        pinkCarX - 20 <= playerX + PLAYER_RADIUS / 2 &&
-        pinkCarY + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        pinkCarY - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[6] + 117 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[6] - 12 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[6] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[6] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (pinkCarX2 + 62 >= playerX - PLAYER_RADIUS / 2 &&
-        pinkCarX2 - 20 <= playerX + PLAYER_RADIUS / 2 &&
-        pinkCarY2 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        pinkCarY2 - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
-    }
-    if (pinkCarX3 + 62 >= playerX - PLAYER_RADIUS / 2 &&
-        pinkCarX3 - 20 <= playerX + PLAYER_RADIUS / 2 &&
-        pinkCarY3 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        pinkCarY3 - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
-    }
-    if (pinkCarX3 + 62 >= playerX - PLAYER_RADIUS / 2 &&
-        pinkCarX3 - 20 <= playerX + PLAYER_RADIUS / 2 &&
-        pinkCarY3 + 30 >= playerY - PLAYER_RADIUS / 2 &&
-        pinkCarY3 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[7] + 115 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[7] - 12 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[7] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[7] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
 
-    if (spidermanX + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        spidermanX - 17 <= playerX + PLAYER_RADIUS / 2 &&
-        spidermanY + 10 >= playerY - PLAYER_RADIUS / 2 &&
-        spidermanY - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[8] + 62 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[8] - 20 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[8] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[8] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (spidermanX2 + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        spidermanX2 - 17 <= playerX + PLAYER_RADIUS / 2 &&
-        spidermanY2 + 10 >= playerY - PLAYER_RADIUS / 2 &&
-        spidermanY2 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[9] + 62 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[9] - 20 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[9] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[9] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (spidermanX3 + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        spidermanX3 - 17 <= playerX + PLAYER_RADIUS / 2 &&
-        spidermanY3 + 10 >= playerY - PLAYER_RADIUS / 2 &&
-        spidermanY3 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[10] + 62 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[10] - 20 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[10] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[10] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
-    if (spidermanX4 + 70 >= playerX - PLAYER_RADIUS / 2 &&
-        spidermanX4 - 17 <= playerX + PLAYER_RADIUS / 2 &&
-        spidermanY4 + 10 >= playerY - PLAYER_RADIUS / 2 &&
-        spidermanY4 - 20 <= playerY + PLAYER_RADIUS / 2) {
+    if (xPositions[11] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[11] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[11] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[11] - 10 <= playerY + PLAYER_RADIUS / 2) {
+        playerY = 467;
+    }
+
+    if (xPositions[12] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[12] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[12] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[12] - 10 <= playerY + PLAYER_RADIUS / 2) {
+        playerY = 467;
+    }
+    if (xPositions[13] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[13] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[13] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[13] - 10 <= playerY + PLAYER_RADIUS / 2) {
+        playerY = 467;
+    }
+    if (xPositions[14] + 70 >= playerX - PLAYER_RADIUS / 2 &&
+        xPositions[14] - 10 <= playerX + PLAYER_RADIUS / 2 &&
+        yPositions[14] + 30 >= playerY - PLAYER_RADIUS / 2 &&
+        yPositions[14] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 467;
     }
 
 }
 
 
-setInterval(refreshUI, 1);
+setInterval(refreshUI, 3);

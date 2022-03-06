@@ -10,8 +10,11 @@
 
 <body onkeydown="keyPressed(event)">
     <h1>Welcome to Frogger! </h1>
-    <canvas id="my-canvas" width="800" height="500" style="border:1px solid rgb(0, 0, 0)"></canvas>
+    <canvas id="my-canvas" width="800" height="500" style="border:1px solid rgb(0, 0, 0)"></canvas> // //
     <script src="js/frogger.js"></script>
+    <div style="position:absolute; top: 540px; width:801.5px;height: 47px;  background-color:#7F00FF; z-index: -1;"></div>
+    <div style="position:absolute; top: 80px; width:801.5px;height: 30px;  background-color:#7F00FF; z-index: -1;"></div>
+
 
 
     <img id="rocketCar" src="images/car 1.png" alt="car1" style="visibility: hidden;">
@@ -29,6 +32,11 @@
     <img id="spiderman2" src="images/car 2.png" alt="car1" style="visibility: hidden;">
     <img id="spiderman3" src="images/car 2.png" alt="car1" style="visibility: hidden;">
     <img id="spiderman4" src="images/car 2.png" alt="car1" style="visibility: hidden;">
+
+    <img id="frogleft" src="images/frog-left.png" alt="frog" style="visibility: hidden;">
+    <img id="frogright" src="images/frog-right.png" alt="frog" style="visibility: hidden;">
+    <img id="frogdown" src="images/frog-down .png" alt="frog" style="visibility: hidden;">
+    <img id="frogup" src="images/frog-up.png" alt="frog" style="visibility: hidden;">
 
     <h2 style="position:absolute; top: 80px; left: 830px;">Use WASD to move. Avoid the cars and try to reach the other side!</h2>
 
