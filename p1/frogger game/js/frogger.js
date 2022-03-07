@@ -28,24 +28,51 @@ let playerOrientation = 1;
 const PLAYER_RADIUS = 20;
 
 //score and play again features
-
 let score = 0;
+let lives = 5;
+let hasWon = false;
 
 
 function refreshUI() {
-
-
     let scoreParagraph = document.getElementById("your-score");
     scoreParagraph.innerHTML = score;
+
+    let livesParagraph = document.getElementById("your-lives");
+    livesParagraph.innerHTML = lives;
+
 
     ctx.clearRect(0, 0, 800, 800);
     drawPlayer();
     drawCars();
     moveCars();
     carCollision();
-    // frogCollision();
+    frogCollision();
     playerCollision();
     scoreCounter();
+
+
+    if (lives === 0) {
+        console.log(lives)
+        livesParagraph.innerHTML = lives;
+        continueGame = prompt("Game over! Would you like to play again (y/n)?");
+
+        if (continueGame === "y") {
+            restart();
+        } else if (continueGame === "n") {
+            clearInterval(loop);
+
+            alert("Thanks for playing!");
+
+
+        }
+    }
+
+
+    function restart() {
+
+        score = 0;
+        lives = 5;
+    }
 }
 
 
@@ -53,19 +80,19 @@ function resetPlayer() {
     //bring player back to starting position
     playerX = 400;
     playerY = 475;
-}
-
-function scoreIncrease() {
-    score++;
+    hasWon = false;
 }
 
 function scoreCounter() {
-    if (playerY === 25) {
+    if (playerY === 25 && !hasWon) {
         score++;
+        hasWon = true;
         setTimeout(resetPlayer, 1000)
 
     }
 }
+
+
 
 //drawing the different frog variations when it is pointing in different directions
 function drawPlayer() {
@@ -156,6 +183,7 @@ function frogCollision() {
         yPositions[0] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[0] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
     if (xPositions[1] + 60 >= playerX - PLAYER_RADIUS / 2 &&
@@ -163,12 +191,14 @@ function frogCollision() {
         yPositions[1] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[1] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[2] + 60 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[2] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[2] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[2] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
 
@@ -177,18 +207,21 @@ function frogCollision() {
         yPositions[3] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[3] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[4] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[4] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[4] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[4] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[5] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[5] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[5] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[5] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
     if (xPositions[6] + 117 >= playerX - PLAYER_RADIUS / 2 &&
@@ -196,12 +229,14 @@ function frogCollision() {
         yPositions[6] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[6] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[7] + 115 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[7] - 12 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[7] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[7] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
     if (xPositions[8] + 62 >= playerX - PLAYER_RADIUS / 2 &&
@@ -209,24 +244,28 @@ function frogCollision() {
         yPositions[8] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[8] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[9] + 62 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[9] - 20 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[9] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[9] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[10] + 62 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[10] - 20 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[10] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[10] - 20 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[11] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[11] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[11] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[11] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
     if (xPositions[12] + 70 >= playerX - PLAYER_RADIUS / 2 &&
@@ -234,21 +273,23 @@ function frogCollision() {
         yPositions[12] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[12] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[13] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[13] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[13] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[13] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
     if (xPositions[14] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[14] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[14] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[14] - 10 <= playerY + PLAYER_RADIUS / 2) {
         playerY = 475;
+        lives = lives - 1;
     }
 
 }
 
-
-setInterval(refreshUI, 3);
+let loop = setInterval(refreshUI, 3);
