@@ -4,6 +4,7 @@ let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
 
 
+//car images 
 let rocketCar = document.getElementById("rocketCar");
 let rocketCar2 = document.getElementById("rocketCar2");
 let rocketCar3 = document.getElementById("rocketCar3");
@@ -22,19 +23,42 @@ let spiderman4 = document.getElementById("spiderman4");
 
 //player position and movement
 let playerX = 400;
-let playerY = 467;
+let playerY = 475;
 let playerOrientation = 1;
 const PLAYER_RADIUS = 20;
 
+//score and play again features
+let timer = 0;
+let score = 0;
 
-function drawBases() {
-    ctx.fillStyle = '#7F00FF';
-    //ctx.fillRect(0, 445, 800, 250);
+function scoreTimer() {
+    timer++;
+}
 
-    //ctx.fillRect(0, 0, 800, 40);
+setInterval(scoreTimer, 1000);
+
+function refreshUI() {
+
+
+    let scoreParagraph = document.getElementById("your-score");
+    scoreParagraph.innerHTML = score;
+
+    ctx.clearRect(0, 0, 800, 800);
+    drawPlayer();
+    drawCars();
+    moveCars();
+    carCollision();
+    // frogCollision();
+    playerCollision();
+    scoreCounter();
 }
 
 
+
+
+
+
+//drawing the different frog variations when it is pointing in different directions
 function drawPlayer() {
     if (playerOrientation === 1) {
         ctx.drawImage(frogup, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
@@ -47,16 +71,24 @@ function drawPlayer() {
     }
 }
 
-function refreshUI() {
-    ctx.clearRect(0, 0, 800, 800);
-    //  drawBases();
-    drawPlayer();
-    drawCars();
-    //oldDrawImage();
-    moveCars();
-    carCollision();
-    frogCollision();
-    playerCollision();
+
+
+
+function resetPlayer() {
+    //bring player back to starting position
+    playerX = 400;
+    playerY = 475;
+}
+
+function scoreIncrease() {
+    score++;
+}
+
+function scoreCounter() {
+    if (playerY === 25) {
+        setTimeout(resetPlayer, 1000)
+
+    }
 }
 
 
@@ -68,18 +100,18 @@ function keyPressed(event) {
 
     //move player
     if (key === 65) {
-        playerX = playerX - 20;
+        playerX = playerX - 40;
         playerOrientation = 4;
     } else if (key === 68) {
-        playerX = playerX + 20
+        playerX = playerX + 40;
         playerOrientation = 3;
 
     } else if (key === 87) {
-        playerY = playerY - 80
+        playerY = playerY - 75;
         playerOrientation = 1;
 
     } else if (key === 83) {
-        playerY = playerY + 80
+        playerY = playerY + 75;
         playerOrientation = 2;
 
     }
@@ -91,18 +123,17 @@ function playerCollision() {
     //edge check
     if (playerX <= 20) {
         playerX = 20;
-    } else if (playerX > 800 - PLAYER_RADIUS) {
-        playerX = 800 - PLAYER_RADIUS;
-    } else if (playerY < 0) {
-        playerY = 18;
-    } else if (playerY > 467) {
-        playerY = 467
-
+    } else if (playerX >= 780) {
+        playerX = 780;
+    } else if (playerY <= 30) {
+        playerY = 25;
+    } else if (playerY >= 500) {
+        playerY = 475
     }
 }
 
 let xPositions = [190, 350, 693, 30, 400, 700, 300, 590, 30, 210, 440, 80, 200, 388, 700];
-let yPositions = [360, 360, 360, 280, 280, 280, 206, 206, 120, 120, 120, 40, 40, 40, 40];
+let yPositions = [372, 372, 372, 300, 300, 300, 228, 228, 148, 148, 148, 72, 72, 72, 72];
 let widths = [50, 50, 50, 60, 60, 60, 110, 110, 50, 50, 50, 60, 60, 60, 60];
 let heights = [50, 50, 50, 50, 50, 50, 37, 37, 50, 50, 50, 50, 50, 50, 50];
 let imageID = ["rocketCar", "rocketCar2", "rocketCar3", "policeCar", "policeCar2", "policeCar3", "truck", "truck2", "pinkCar", "pinkCar2", "pinkCar3", "spiderman", "spiderman2", "spiderman3", "spiderman4"];
@@ -135,20 +166,20 @@ function frogCollision() {
         xPositions[0] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[0] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[0] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
     if (xPositions[1] + 60 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[1] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[1] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[1] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[2] + 60 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[2] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[2] + 20 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[2] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
 
@@ -156,76 +187,76 @@ function frogCollision() {
         xPositions[3] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[3] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[3] - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[4] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[4] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[4] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[4] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[5] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[5] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[5] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[5] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
     if (xPositions[6] + 117 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[6] - 12 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[6] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[6] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[7] + 115 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[7] - 12 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[7] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[7] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
     if (xPositions[8] + 62 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[8] - 20 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[8] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[8] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[9] + 62 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[9] - 20 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[9] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[9] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[10] + 62 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[10] - 20 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[10] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[10] - 20 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[11] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[11] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[11] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[11] - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
     if (xPositions[12] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[12] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[12] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[12] - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[13] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[13] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[13] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[13] - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
     if (xPositions[14] + 70 >= playerX - PLAYER_RADIUS / 2 &&
         xPositions[14] - 10 <= playerX + PLAYER_RADIUS / 2 &&
         yPositions[14] + 30 >= playerY - PLAYER_RADIUS / 2 &&
         yPositions[14] - 10 <= playerY + PLAYER_RADIUS / 2) {
-        playerY = 467;
+        playerY = 475;
     }
 
 }
