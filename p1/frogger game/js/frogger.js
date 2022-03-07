@@ -86,6 +86,7 @@ function scoreIncrease() {
 
 function scoreCounter() {
     if (playerY === 25) {
+        score++;
         setTimeout(resetPlayer, 1000)
 
     }
