@@ -28,14 +28,9 @@ let playerOrientation = 1;
 const PLAYER_RADIUS = 20;
 
 //score and play again features
-let timer = 0;
+
 let score = 0;
 
-function scoreTimer() {
-    timer++;
-}
-
-setInterval(scoreTimer, 1000);
 
 function refreshUI() {
 
@@ -54,26 +49,6 @@ function refreshUI() {
 }
 
 
-
-
-
-
-//drawing the different frog variations when it is pointing in different directions
-function drawPlayer() {
-    if (playerOrientation === 1) {
-        ctx.drawImage(frogup, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
-    } else if (playerOrientation === 2) {
-        ctx.drawImage(frogdown, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
-    } else if (playerOrientation === 3) {
-        ctx.drawImage(frogright, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
-    } else if (playerOrientation === 4) {
-        ctx.drawImage(frogleft, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
-    }
-}
-
-
-
-
 function resetPlayer() {
     //bring player back to starting position
     playerX = 400;
@@ -89,6 +64,19 @@ function scoreCounter() {
         score++;
         setTimeout(resetPlayer, 1000)
 
+    }
+}
+
+//drawing the different frog variations when it is pointing in different directions
+function drawPlayer() {
+    if (playerOrientation === 1) {
+        ctx.drawImage(frogup, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 2) {
+        ctx.drawImage(frogdown, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 3) {
+        ctx.drawImage(frogright, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    } else if (playerOrientation === 4) {
+        ctx.drawImage(frogleft, playerX - PLAYER_RADIUS, playerY - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
     }
 }
 
