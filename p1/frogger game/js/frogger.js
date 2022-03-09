@@ -131,10 +131,10 @@ function keyPressed(event) {
 
     //move player
     if (key === 65) {
-        playerX = playerX - 40; //move player left
+        playerX = playerX - 50; //move player left
         playerOrientation = 4;
     } else if (key === 68) { //move player right
-        playerX = playerX + 40;
+        playerX = playerX + 50;
         playerOrientation = 3;
 
     } else if (key === 87) {
