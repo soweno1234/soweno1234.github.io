@@ -27,19 +27,31 @@ let playerY = 475;
 let playerOrientation = 1;
 const PLAYER_RADIUS = 20;
 
+//car variables
+let xPositions = [
+    //car row 1
+    Math.floor(Math.random() * 200) + 10, Math.floor(Math.random() * 150) + 300, Math.floor(Math.random() * 120) + 600,
+    //car row 2
+    Math.floor(Math.random() * 158) + 20, Math.floor(Math.random() * 200) + 250, Math.floor(Math.random() * 100) + 600,
+    // car row 3
+    Math.floor(Math.random() * 200) + 50, Math.floor(Math.random() * 270) + 400,
+    //car row 4
+    Math.floor(Math.random() * 180) + 20, Math.floor(Math.random() * 200) + 270, Math.floor(Math.random() * 130) + 550,
+    //car row 5
+    Math.floor(Math.random() * 40) + 20, Math.floor(Math.random() * 30) + 240, Math.floor(Math.random() * 20) + 400, Math.floor(Math.random() * 20) + 650
+]; //car x position
 
+let yPositions = [372, 372, 372, 300, 300, 300, 228, 228, 148, 148, 148, 72, 72, 72, 72]; //car Y positions
+let widths = [50, 50, 50, 60, 60, 60, 110, 110, 50, 50, 50, 60, 60, 60, 60]; //car widths
+let heights = [50, 50, 50, 50, 50, 50, 37, 37, 50, 50, 50, 50, 50, 50, 50]; //car heights
+let imageID = ["rocketCar", "rocketCar2", "rocketCar3", "policeCar", "policeCar2", "policeCar3", "truck", "truck2", "pinkCar", "pinkCar2", "pinkCar3", "spiderman", "spiderman2", "spiderman3", "spiderman4"]; //car image ID
+let carSpeed = [.9, .9, .9, 1.3, 1.3, 1.3, 1, 1, 1.2, 1.2, 1.2, .8, .8, .8, .8]; //car speed
+let collisionDistance = [790, 790, 790, 775, 775, 775, 735, 735, 790, 790, 790, 775, 775, 775, 775]; //collision distance for when cars hit the edge
 
 //score and play again features
 let score = 0;
 let lives = 5;
 let hasWon = false;
-
-
-
-function refreshPowerup() {
-    drawPowerup();
-
-}
 
 //refresh function that refreshes variables/functions
 function refreshUI() {
@@ -54,9 +66,9 @@ function refreshUI() {
     drawPlayer(); //draws the player
     drawCars(); //draws the cars
     moveCars(); //moves the cars
-    carCollision(); //when car hits the edge it goes to the other side
-    frogCollision(); //resets player when player collides with a car
-    playerCollision(); //player stays within the borders of canvas
+    carEdgeCheck(); //when car hits the edge it goes to the other side
+    playerCarCollision(); //resets player when player collides with a car
+    playerEdgeCheck(); //player stays within the borders of canvas
     scoreCounter(); //updates score
 
 
@@ -70,22 +82,18 @@ function refreshUI() {
         } else if (continueGame === "n") { //if player chooses no, then stop the setInterval function which stops refreshUI
             clearInterval(loop);
 
-            alert("Thanks for playing!");
+            alert("Thanks for playing!"); //game over
 
 
         }
     }
 
-
-
-
     function restart() { //resets game if player wants to play again
-
         score = 0;
         lives = 5;
+
     }
 }
-
 
 function resetPlayer() {
     //bring player back to starting position
@@ -103,7 +111,6 @@ function scoreCounter() {
     }
 }
 
-
 //drawing the different frog variations when it is pointing in different directions
 function drawPlayer() {
     if (playerOrientation === 1) {
@@ -117,12 +124,10 @@ function drawPlayer() {
     }
 }
 
-
 // when key is pressed
 function keyPressed(event) {
     //get the actual key pressed
     let key = event.keyCode;
-
 
     //move player
     if (key === 65) {
@@ -143,9 +148,7 @@ function keyPressed(event) {
     }
 }
 
-
-
-function playerCollision() {
+function playerEdgeCheck() {
     //edge check
     if (playerX <= 20) { //keeps player inside the left
         playerX = 20;
@@ -157,27 +160,6 @@ function playerCollision() {
         playerY = 475
     }
 }
-
-let xPositions = [
-    //car row 1
-    Math.floor(Math.random() * 200) + 10, Math.floor(Math.random() * 150) + 300, Math.floor(Math.random() * 120) + 600,
-    //car row 2
-    Math.floor(Math.random() * 158) + 20, Math.floor(Math.random() * 200) + 250, Math.floor(Math.random() * 100) + 600,
-    // car row 3
-    Math.floor(Math.random() * 200) + 50, Math.floor(Math.random() * 270) + 400,
-    //car row 4
-    Math.floor(Math.random() * 180) + 20, Math.floor(Math.random() * 200) + 270, Math.floor(Math.random() * 130) + 550,
-    //car row 5
-    Math.floor(Math.random() * 40) + 20, Math.floor(Math.random() * 30) + 240, Math.floor(Math.random() * 20) + 400, Math.floor(Math.random() * 20) + 650
-];
-
-//car X positions
-let yPositions = [372, 372, 372, 300, 300, 300, 228, 228, 148, 148, 148, 72, 72, 72, 72]; //car Y positions
-let widths = [50, 50, 50, 60, 60, 60, 110, 110, 50, 50, 50, 60, 60, 60, 60]; //car widths
-let heights = [50, 50, 50, 50, 50, 50, 37, 37, 50, 50, 50, 50, 50, 50, 50]; //car heights
-let imageID = ["rocketCar", "rocketCar2", "rocketCar3", "policeCar", "policeCar2", "policeCar3", "truck", "truck2", "pinkCar", "pinkCar2", "pinkCar3", "spiderman", "spiderman2", "spiderman3", "spiderman4"]; //car image ID
-let carSpeed = [.9, .9, .9, 1.3, 1.3, 1.3, 1, 1, 1.2, 1.2, 1.2, .8, .8, .8, .8]; //car speed
-let collisionDistance = [790, 790, 790, 775, 775, 775, 735, 735, 790, 790, 790, 775, 775, 775, 775]; //collision distance for when cars hit the edge
 
 function drawCars() {
     for (let i = 0; i < xPositions.length; i++) { //repeats for the entire array
@@ -191,7 +173,7 @@ function moveCars() {
     }
 }
 
-function carCollision() {
+function carEdgeCheck() {
     for (let i = 0; i < xPositions.length; i++) { //repeats for entire array
         if (xPositions[i] > collisionDistance[i] + widths[i]) { //brings car to the other side when it hits the right edge
             xPositions[i] = 0 - widths[i]
@@ -199,7 +181,7 @@ function carCollision() {
     }
 }
 
-function frogCollision() { //when frog hits a car
+function playerCarCollision() { //when frog hits a car
 
     if (xPositions[0] + 57 >= playerX - PLAYER_RADIUS / 2 && //gets the right edge of car
         xPositions[0] - 9 <= playerX + PLAYER_RADIUS / 2 && // gets the left edge of the car
