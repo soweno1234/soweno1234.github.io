@@ -45,7 +45,7 @@ let yPositions = [372, 372, 372, 300, 300, 300, 228, 228, 148, 148, 148, 72, 72,
 let widths = [50, 50, 50, 60, 60, 60, 110, 110, 50, 50, 50, 60, 60, 60, 60]; //car widths
 let heights = [50, 50, 50, 50, 50, 50, 37, 37, 50, 50, 50, 50, 50, 50, 50]; //car heights
 let imageID = ["rocketCar", "rocketCar2", "rocketCar3", "policeCar", "policeCar2", "policeCar3", "truck", "truck2", "pinkCar", "pinkCar2", "pinkCar3", "spiderman", "spiderman2", "spiderman3", "spiderman4"]; //car image ID
-let carSpeed = [.9, .9, .9, 1.3, 1.3, 1.3, 1, 1, 1.2, 1.2, 1.2, .8, .8, .8, .8]; //car speed
+let carSpeed = [.7, .7, .7, 1.1, 1.1, 1.1, .9, .9, 1.1, 1.1, 1.1, .7, .7, .7, .7]; //car speed
 let collisionDistance = [790, 790, 790, 775, 775, 775, 735, 735, 790, 790, 790, 775, 775, 775, 775]; //collision distance for when cars hit the edge
 
 //score and play again features
@@ -131,10 +131,10 @@ function keyPressed(event) {
 
     //move player
     if (key === 65) {
-        playerX = playerX - 50; //move player left
+        playerX = playerX - 35; //move player left
         playerOrientation = 4;
     } else if (key === 68) { //move player right
-        playerX = playerX + 50;
+        playerX = playerX + 35;
         playerOrientation = 3;
 
     } else if (key === 87) {
