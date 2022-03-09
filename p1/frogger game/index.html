@@ -10,39 +10,41 @@
 
 <body onkeydown="keyPressed(event)">
     <h1>Welcome to Frogger! </h1>
-    <canvas id="my-canvas" width="800" height="500" style="border:1px solid rgb(0, 0, 0)"></canvas> // //
+    <canvas id="my-canvas" width="800" height="500" style="border:1px solid rgb(0, 0, 0)"></canvas>
     <script src="js/frogger.js"></script>
     <div style="position:absolute; top: 533px; width:801.5px;height: 50px;  background-color:#7F00FF; z-index: -1;"></div>
     <div style="position:absolute; top: 80px; width:801.5px;height: 50px;  background-color:#7F00FF; z-index: -1;"></div>
 
 
 
+
     <img id="rocketCar" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="rocketCar2" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="rocketCar3" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="policeCar" src="images/car 2.png" alt="car2" style="visibility: hidden;">
-    <img id="policeCar2" src="images/car 2.png" alt="car2" style="visibility: hidden;">
-    <img id="policeCar3" src="images/car 2.png" alt="car2" style="visibility: hidden;">
-    <img id="truck" src="images/car 3.png" alt="car3" style="visibility: hidden;">
-    <img id="truck2" src="images/car 3.png" alt="car3" style="visibility: hidden;">
-    <img id="pinkCar" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="pinkCar2" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="pinkCar3" src="images/car 1.png" alt="car1" style="visibility: hidden;">
-    <img id="spiderman" src="images/car 2.png" alt="car1" style="visibility: hidden;">
-    <img id="spiderman2" src="images/car 2.png" alt="car1" style="visibility: hidden;">
-    <img id="spiderman3" src="images/car 2.png" alt="car1" style="visibility: hidden;">
-    <img id="spiderman4" src="images/car 2.png" alt="car1" style="visibility: hidden;">
+    <img id="rocketCar2" src="images/car 1.png" alt="car2" style="visibility: hidden;">
+    <img id="rocketCar3" src="images/car 1.png" alt="car3" style="visibility: hidden;">
+    <img id="policeCar" src="images/car 2.png" alt="car4" style="visibility: hidden;">
+    <img id="policeCar2" src="images/car 2.png" alt="car5" style="visibility: hidden;">
+    <img id="policeCar3" src="images/car 2.png" alt="car6" style="visibility: hidden;">
+    <img id="truck" src="images/car 3.png" alt="car7" style="visibility: hidden;">
+    <img id="truck2" src="images/car 3.png" alt="car8" style="visibility: hidden;">
+    <img id="pinkCar" src="images/car 1.png" alt="car9" style="visibility: hidden;">
+    <img id="pinkCar2" src="images/car 1.png" alt="car10" style="visibility: hidden;">
+    <img id="pinkCar3" src="images/car 1.png" alt="car11" style="visibility: hidden;">
+    <img id="spiderman" src="images/car 2.png" alt="car12" style="visibility: hidden;">
+    <img id="spiderman2" src="images/car 2.png" alt="car13" style="visibility: hidden;">
+    <img id="spiderman3" src="images/car 2.png" alt="car14" style="visibility: hidden;">
+    <img id="spiderman4" src="images/car 2.png" alt="car15" style="visibility: hidden;">
+    <img id="cherry" src="images/cherry.png" alt="cherry-powerup" style="visibility: hidden">
 
     <img id="frogleft" src="images/frog-left.png" alt="frog" style="visibility: hidden;">
     <img id="frogright" src="images/frog-right.png" alt="frog" style="visibility: hidden;">
     <img id="frogdown" src="images/frog-down .png" alt="frog" style="visibility: hidden;">
     <img id="frogup" src="images/frog-up.png" alt="frog" style="visibility: hidden;">
 
-    <h2 style="position:absolute; top: 80px; left: 830px;">Use WASD to move. Avoid the cars and try to reach the other side!</h2>
-    <h2 style="font-weight: normal; position:absolute; top: 160px; left: 830px">Score: </h2>
-    <h2 id="your-score" style="font-weight: normal; position:absolute; top: 160.5px; left: 898px">0 </h2>
-    <h2 style="font-weight: normal; position:absolute; top: 210px; left: 830px">Lives: </h2>
-    <h2 id="your-lives" style="font-weight: normal; position:absolute; top: 210px; left: 898px">0 </h2>
+    <h2 style="position:absolute; font-weight: normal; top: 80px; left: 830px;">Use WASD to move. Avoid the cars and try to reach the other side!<br> Every time you reach the other side, your score will increase by 1. But everytime you get hit by a car, your lives will decrease by 1. You have 5 lives. Goodluck!</h2>
+    <h2 style="font-weight: normal; position:absolute; top: 230px; left: 830px">Score: </h2>
+    <h2 id="your-score" style="font-weight: normal; position:absolute; top: 230px; left: 898px">0 </h2>
+    <h2 style="font-weight: normal; position:absolute; top: 280px; left: 830px">Lives: </h2>
+    <h2 id="your-lives" style="font-weight: normal; position:absolute; top: 280px; left: 898px">0 </h2>
 
 
 </body>
