@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="ask-color">
+    <h1>Lets learn javascript</h1>
+    <h2>how do we do onclick events and alerts</h2>
+    <a href="https://eastsideprep.org" target="_blank" onclick="alert('Warning! ou are navigating away from my page!')">School website</a>
+
+
+    <hr>
+    <h2>Whats my secret identity?</h2>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='batman!!!!!'; document.getElementById('secret').style.display='block'">Reveal!</button>
+
+    <button onclick="document.getElementById( 'secret').style.display='none' ">Hide!</button>
+
+    <hr>
+    <h2>How do we change images with javascript</h2>
+
+    <img src="images/off.jpg" alt="nihaal 1" id="pre">
+    <button onclick="document.getElementById('pre').src='images/off.jpg'">Turn off light</button>
+    <button onclick="document.getElementById('pre').src='images/on.jpg'">Turn on light </button>
+
+    <hr>
+    <h2>how do I change css styles with a button?</h2>
+    <p id="alice">hi im alice</p>
+    <button onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize='30px'">Cake: eat me</button>
+    <!--CHANGE TO RED AND INCREASE FONT SIZE TO 40px-->
+    <button onclick="document.getElementById('alice').style.color='red'; document.getElementById('alice').style.fontSize='40px'">Position:drink me</button>
+
+    <!--ADD ANOTHER BUTTON TO RETURN ALICE TO ORIGINAL FONT SIZE AND COLOR USING A FUNCTION-->
+    <button onclick="normalAlice();">return to normal</button>
+
+
+    <hr>
+    <h2> how do we return user input data?</h2>
+    <button onclick="askName();">What's your name?</button>
+    <p id="ask-name"></p>
+
+
+    <hr>
+    <h2>How do we change the background color</h2>
+    <button onclick="changeBackground();">What's color do you want the background to be? Blue or Red?</button>
+
+    <hr>
+    <h2>How do we change the font in any piece of text?</h2>
+    <p id="ask-font">Click the button to change the font of this text!</p>
+    <button onclick="changeFont();">What font do you want to choose? Verdana or Georgia?</button>
+    <button onclick="resetFont()">Reset the font back to default</button>
+
+
+
+    <script>
+        function normalAlice() {
+            let aliceParagraph = document.getElementById('alice');
+            aliceParagraph.style.color = 'black';
+            aliceParagraph.style.fontSize = '15px';
+        }
+
+        function askName() {
+            let nameParagraph = document.getElementById('ask-name');
+            let name = prompt("what is your name?");
+
+            //decide what to do
+
+            if (name === "batman") {
+                nameParagraph.innerHTML = "Welcome to the batcave sir.";
+            } else {
+                nameParagraph.innerHTML = "Hello " + name + "! Nice to meet you."
+            }
+        }
+
+        function changeBackground() {
+            let colorParagraph = document.getElementById('ask-color');
+            let color = prompt("what color do you want to choose? Blue or Red?");
+
+            if (color === "Blue") {
+                document.getElementById("ask-color").style.backgroundColor = "lightblue";
+            }
+            if (color === "Red") {
+                document.getElementById("ask-color").style.backgroundColor = "red";
+            }
+        }
+
+        function changeFont() {
+            let fontParagraph = document.getElementById('ask-font');
+            let font = prompt("What font do you want to choose? Verdana or Georgia?");
+
+            if (font === "Verdana") {
+                document.getElementById("ask-font").style.fontFamily = "Verdana, sans-serif";
+            }
+
+            if (font === "Georgia") {
+                document.getElementById("ask-font").style.fontFamily = "Georgia, serif";
+            }
+
+        }
+
+        function resetFont() {
+            document.getElementById("ask-font").style.fontFamily = "Times, Times New Roman, serif";
+        }
+    </script>
+
+
+
+</body>
+
+</html>
