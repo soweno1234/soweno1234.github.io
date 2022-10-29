@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Demo</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js></script>
+</head>
+
+<body class="bg-dark">
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+
+            <div class="navbar-brand">
+
+                <img src="images/dashiel.JPG" alt="Dash" height="50px">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="#">About Me</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="#">Contact</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+    </nav>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/tanmacan.jfif" alt="Tan Porsche Macan" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Tan Macan</h3>
+                    <p>Sleek beige!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/rubymacan.jfif" alt="Ruby Porsche Macan" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Ruby Macan</h3>
+                    <p>Gorgeous Red!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bluemacan.jfif" alt="Blue Porsche Macan" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Blue Macan</h3>
+                    <p>Beautiful Turquouise</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="toast show">
+        <div class="toast-header">
+            Hey you!
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Visit eastsideprep.org to learn about Eastside Prep!
+        </div>
+    </div>
+
+    <div class="container p-5 m-5 mx-auto text-white border">
+        <h1>My first bootstrap page</h1>
+        <p>This part is inside a container-fluid class</p>
+        <p>It takes up the entire width of the screen</p>
+    </div>
+
+    <div class="container p-2 m-2 mx-auto text-white border-bottom">
+        <h1>Porsche is my favorite car company</h1>
+        <p>The macan is a sporty, luxurious SUV with fascinating colors</p>
+        <p>There are 3 colors above that I particularly enjoy</p>
+    </div>
+    <!--student challenge: create another container with different padding, colors, margin-->
+
+    <!--bootstrap grid-->
+    <!--student challenge: change the grid to 5 columns: spanning 4, 4, 2, 1, 1-->
+
+    <div class="row text-white">
+        <div class="col-sm-3">
+            <div class="col-md-3">
+                <h2>Bootstrap is for HTML</h2>
+                <p>HTML is fun </p>
+                <a class="btn btn-primary" href="#" role="button">More on HTML</a>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-md-6">
+                <h2>Bootstrap is for CSS</h2>
+                <p>To make things look pretty</p>
+                <a class="btn btn-success" href="#" role="button">More on CSS</a>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="col-md-3">
+                <h2>Bootstrap is for JS</h2>
+                <p>To do cool things like slide shows.</p>
+                <a class="btn btn-info" href="#" role="button">More on JS</a>
+            </div>
+        </div>
+        <div class="col-sm-3">Hello</div>
+    </div>
+
+    <div class="row text-white">
+        <div class="col-sm-3">Porsche Colors</div>
+        <div class="col-sm-3">Jet Black Metallic</div>
+        <div class="col-sm-3">Carrara White Metallic</div>
+        <div class="col-sm-3">Gentian Blue Metallic</div>
+    </div>
+    <div class="row text-white">
+        <div class="col-sm-4">Carmine Red</div>
+        <div class="col-sm-8">Chalk</div>
+    </div>
+    <div class="row text-white">
+        <div class="col-sm-4">White</div>
+    </div>
+    <div class="row text-white">
+        <div class="col-sm-4">Black</div>
+    </div>
+    <script>
+        document.getElementById("toastbtn").onclick = function() {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+            })
+            toastList.forEach(toast => toast.show())
+        }
+    </script>
+</body>
+
+</html>
