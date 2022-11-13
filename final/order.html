@@ -6,34 +6,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soren's Truth and Lie Game</title>
+
+
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/fer0lfx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mry8kui.css">
+
+
 </head>
+
+<style>
+    .navmenu {
+        grid-column: 1/ span 4;
+        grid-row: 1;
+    }
+</style>
 
 <body>
 
-    <hr>
-    <h2>Two truths and a lie. Which is the lie?</h2>
-    <p id="truth-answer"></p>
-    <form action="">
-        <label for="fname">First Name:</label>
-        <input type="text" name="greet" id="fname">
+    <div class="grid-container">
+
+        <!--
+        <div class="title-image">
+            <img style="width: 180%; padding-top: 50px;" src="images/titleimage.jpg">
+        </div>-->
+
+
+        <div class="grid-item navmenu">
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="rooms.html">Private Rooms</a>
+        </div>
+
+        <!--
+        <div class="border1" style="width: 16.5%;height:2000px; border:1px solid black; background-color: black;"></div>
+-->
+
+
+        <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
+        <br>
         <br>
 
-        <label for="age">Age:</label>
-        <input type="text" name="greet" id="age">
+        <form action="">
+            <label for="fname">First Name:</label>
+            <input type="text" name="greet" id="fname">
+            <br>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" name="greet" id="lname">
+            <label for="lname">Last Name:</label>
+            <input type="text" name="greet" id="lname">
+            <br>
 
-        <label for="address">Address:</label>
-        <input type="text" name="greet" id="address">
-
-    </form>
-    <br>
-    <input type="button" value="SUBMIT" onclick="truthAndLie();">
+            <label for="age">Age:</label>
+            <input type="text" name="greet" id="age">
+            <br>
 
 
 
-    <script src="js/order.js"></script>
+            <label for="address">Address:</label>
+            <input type="text" name="greet" id="address">
+            <br>
+        </form>
+        <br>
+        <input type="button" value="SUBMIT" onclick="truthAndLie();">
+        <p id="truth-answer"></p>
+        <br>
+        <h2>Appetizers</h2>
+
+        <form action="">
+            <input type="radio" name="Appetizers" id="SateAyam">
+            <label for="SateAyam">Sate Ayam</label>
+            <br>
+            <input type="radio" name="Appetizers" id="PangsitGoreng">
+            <label for="PangsitGoreng">Pangsit Goreng</label>
+            <br>
+            <input type="radio" name="Appetizers" id="TempeMendoan">
+            <label for="TempeMendoan">Tempe Mendoan</label>
+            <br>
+            <input type="radio" name="Appetizers" id="Risoles">
+            <label for="Risoles">Risoles</label>
+            <br>
+            <input type="radio" name="Appetizers" id="SiomayCampurBandung">
+            <label for="SiomayCampurBandung">Siomay Campur Bandung</label>
+            <br>
+            <input type="radio" name="Appetizers" id="FriedSpringRoll">
+            <label for="FriedSpringRoll">Fried Spring Roll</label>
+            <br>
+            <input type="radio" name="Appetizers" id="ChickenandFishTofu">
+            <label for="ChickenandFishTofu">Chicken and Fish Tofu</label>
+
+
+            <br>
+            <h2>Meat & Seafood</h2>
+            <input type="radio" name="meat" id="AyamGorengBalado">
+            <label for="AyamGorengBalado">Ayam Goreng Balado</label>
+            <br>
+            <input type="radio" name="meat" id="AyamCabeiJo">
+            <label for="AyamCabeiJo">Ayam Cabei Jo</label>
+            <br>
+            <input type="radio" name="meat" id="IkanBakarKecap">
+            <label for="IkanBakarKecap">Ikan Bakar Kecap</label>
+            <br>
+            <input type="radio" name="meat" id="EmpekEmpekPalembang">
+            <label for="EmpekEmpekPalembang">Empek-Empek Palembang</label>
+            <br>
+            <input type="radio" name="meat" id="IkanGorengLalapan">
+            <label for="IkanGorengLalapan">Ikan Goreng Lalapan</label>
+            <br>
+            <input type="radio" name="meat" id="MiniRijsttafelAyamMbokBerek">
+            <label for="MiniRijsttafelAyamMbokBerek">Mini Rijsttafel Ayam Mbok Berek</label>
+            <br>
+            <input type="radio" name="meat" id="MiniRijsttafelRendangBeef">
+            <label for="MiniRijsttafelRendangBeef">Mini Rijsttafel Rendang Beef</label>
+            <br>
+            <input type="radio" name="meat" id="RendangSapi">
+            <label for="RendangSapi">Rendang Sapi</label>
+            <br>
+            <input type="radio" name="meat" id="AyamGorengMbokBerek">
+            <label for="AyamGorengMbokBerek">Ayam Goreng Mbok Berek</label>
+
+            <br>
+            <h2>Rice & Noodle</h2>
+            <input type="radio" name="rice" id="BakmiGorengJawa">
+            <label for="BakmiGorengJawa">Bakmi Goreng Jawa</label>
+            <br>
+            <input type="radio" name="rice" id="BihunBakso">
+            <label for="BihunBakso">Bihun Bakso</label>
+            <br>
+            <input type="radio" name="rice" id="NasiKuningKomplit">
+            <label for="NasiKuningKomplit">Nasi Kuning Komplit</label>
+            <br>
+            <input type="radio" name="rice" id="NasiGorengIndonesia">
+            <label for="NasiGorengIndonesia">Nasi Goreng Indonesia</label>
+            <br>
+            <br>
+            <input type="button" value="SUBMIT" onclick="truthAndLie1();">
+            <p id="truth-answer1"></p>
+        </form>
+        <script src=" js/order.js "></script>
+    </div>
 </body>
 
 </html>
