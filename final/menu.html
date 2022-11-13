@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IndoCafe</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/fer0lfx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mry8kui.css">
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto auto auto auto auto;
+        }
+        
+        .grid-item {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        .navmenu {
+            grid-column: 1/ span 3;
+            grid-row: 1;
+        }
+        
+        .order {
+            grid-column: 3;
+            grid-row: 1;
+            margin-top: 30px;
+            margin-left: 480px;
+        }
+        
+        .title {
+            grid-column: 1 /span 3;
+            grid-row: 2;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .subtitle {
+            grid-column: 1 /span 3;
+            grid-row: 3;
+            text-align: center;
+        }
+        
+        .heading1 {
+            grid-column: 1;
+            grid-row: 4;
+            padding-left: 100px;
+            padding-bottom: 20px;
+        }
+        
+        .appetizer1 {
+            grid-column: 1 / span 2;
+            grid-row: 5 / span 2;
+            padding-left: 100px;
+        }
+        
+        .disc1 {
+            grid-column: 1 / span 2;
+            grid-row: 7;
+            padding-left: 100px;
+            margin-top: -20px;
+        }
+        
+        .appetizer2 {
+            grid-column: 3;
+            grid-row: 5;
+            margin-right: 350px;
+        }
+        
+        .disc2 {
+            grid-column: 3;
+            grid-row: 6;
+            margin-right: 350px;
+            padding-bottom: 260px;
+        }
+        
+        .appetizer3 {
+            grid-column: 3;
+            grid-row: 6;
+            padding-top: 48.5px;
+            margin-right: 350px;
+        }
+        
+        .disc3 {
+            grid-column: 3;
+            grid-row: 7;
+            margin-right: 350px;
+            margin-top: -20px;
+        }
+        
+        .appetizer4 {
+            grid-column: 3;
+            grid-row: 6;
+            padding-top: 48.5px;
+            margin-left: 350px;
+        }
+        
+        .disc4 {
+            grid-column: 3;
+            grid-row: 7;
+            margin-left: 350px;
+            margin-top: -20px;
+        }
+        
+        .appetizer5 {
+            grid-column: 3;
+            grid-row: 5;
+            margin-left: 350px;
+        }
+        
+        .disc5 {
+            grid-column: 3;
+            grid-row: 6;
+            margin-left: 350px;
+        }
+        
+        .appetizer6 {
+            grid-column: 3;
+            grid-row: 7;
+            padding-top: 25px;
+            margin-right: 350px;
+        }
+        
+        .disc6 {
+            grid-column: 3;
+            grid-row: 8;
+            margin-right: 350px;
+        }
+        
+        .appetizer7 {
+            grid-column: 3;
+            grid-row: 7;
+            margin-left: 350px;
+            padding-top: 25px;
+        }
+        
+        .disc7 {
+            grid-column: 3;
+            grid-row: 8;
+            margin-left: 350px;
+        }
+        /*---------------------------------------------------------------------*/
+        
+        .heading2 {
+            grid-column: 1;
+            grid-row: 9;
+            padding-left: 100px;
+            padding-bottom: 20px;
+            padding-top: 50px;
+        }
+        
+        .meat1 {
+            grid-column: 1 / span 2;
+            grid-row: 10 / span 2;
+            padding-left: 100px;
+        }
+        
+        .mdisc1 {
+            grid-column: 1 / span 2;
+            grid-row: 12;
+            padding-left: 100px;
+            margin-top: -15px;
+        }
+        
+        .meat2 {
+            grid-column: 3;
+            grid-row: 10;
+            margin-right: 350px;
+        }
+        
+        .mdisc2 {
+            grid-column: 3;
+            grid-row: 11;
+            margin-right: 350px;
+            padding-bottom: 260px;
+        }
+        
+        .meat3 {
+            grid-column: 3;
+            grid-row: 11;
+            padding-top: 48.5px;
+            margin-right: 350px;
+        }
+        
+        .mdisc3 {
+            grid-column: 3;
+            grid-row: 12;
+            margin-right: 350px;
+            margin-top: -20px;
+        }
+        
+        .meat4 {
+            grid-column: 3;
+            grid-row: 10;
+            margin-left: 350px;
+        }
+        
+        .mdisc4 {
+            grid-column: 3;
+            grid-row: 11;
+            margin-left: 350px;
+        }
+        
+        .meat5 {
+            grid-column: 3;
+            grid-row: 11;
+            padding-top: 48.5px;
+            margin-left: 350px;
+        }
+        
+        .mdisc5 {
+            grid-column: 3;
+            grid-row: 12;
+            margin-left: 350px;
+            margin-top: -20px;
+        }
+        
+        .meat6 {
+            grid-column: 3;
+            grid-row: 13;
+            margin-top: -5px;
+            margin-right: 350px;
+        }
+        
+        .mdisc6 {
+            grid-column: 3;
+            grid-row: 14;
+            margin-right: 350px;
+        }
+        
+        .meat7 {
+            grid-column: 3;
+            grid-row: 13;
+            margin-left: 350px;
+            margin-top: -4px;
+        }
+        
+        .mdisc7 {
+            grid-column: 3;
+            grid-row: 14;
+            margin-left: 350px;
+        }
+        
+        .meat8 {
+            grid-column: 1;
+            grid-row: 13;
+            padding-left: 100px;
+        }
+        
+        .mdisc8 {
+            grid-column: 1;
+            grid-row: 14;
+            padding-left: 100px;
+        }
+        
+        .meat9 {
+            grid-column: 2;
+            grid-row: 13;
+        }
+        
+        .mdisc9 {
+            grid-column: 2;
+            grid-row: 14;
+            padding-bottom: 30px;
+        }
+        /*---------------------------------------------------------------------*/
+        
+        .heading3 {
+            grid-column: 1;
+            grid-row: 15;
+            padding-left: 100px;
+            padding-bottom: 20px;
+        }
+        
+        .rice1 {
+            grid-column: 1 / span 2;
+            grid-row: 16 / span 2;
+            padding-left: 100px;
+        }
+        
+        .rdisc1 {
+            grid-column: 1 / span 2;
+            grid-row: 18;
+            padding-left: 100px;
+        }
+        
+        .rice2 {
+            grid-column: 3;
+            grid-row: 16;
+            margin-right: 350px;
+        }
+        
+        .rdisc2 {
+            grid-column: 3;
+            grid-row: 17;
+            margin-right: 350px;
+            padding-bottom: 260px;
+        }
+        
+        .rice3 {
+            grid-column: 3;
+            grid-row: 17;
+            padding-top: 48.5px;
+            margin-right: 350px;
+        }
+        
+        .rdisc3 {
+            grid-column: 3;
+            grid-row: 18;
+            margin-right: 350px;
+            margin-top: -20px;
+        }
+        
+        .rice4 {
+            grid-column: 3;
+            grid-row: 16;
+            margin-left: 350px;
+        }
+        
+        .rdisc4 {
+            grid-column: 3;
+            grid-row: 17;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+
+
+
+        <div class="grid-item navmenu">
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="rooms.html">Private Rooms</a>
+        </div>
+
+        <button class="button order"><span>Order Now</span></button>
+
+        <h1 class="title" style="font-size:70px; padding-top:20px;">Menu</h1>
+        <h3 class="subtitle" style="font-size: 30px; padding-top: 5px;">Explore over 50 delicious Indonesian dishes</h3>
+
+
+        <h1 class="heading1" style="font-size:50px; padding-top:20px;">Appetizers</h1>
+
+
+        <img src="images/menukabob.jpg" width="800px" alt="sate ayam dish" class="appetizer1">
+        <h2 style="font-size: 20px;" class="disc1">Kabob dish</h2>
+
+
+        <img src="images/pangsitgoreng.png" width="315" alt="pangsit goreng dish" class="appetizer2">
+        <h2 style="font-size: 20px;" class="disc2">Pangsit Goreng</h2>
+
+        <img src="images/risoles.jpg" width="315" alt="risoles dish" class="appetizer3">
+        <h2 style="font-size: 20px;" class="disc3">Risoles</h2>
+
+
+        <img src="images/siomaycampurbandung.jpg" width="315" alt="siomay campur bandung dish" class="appetizer4">
+        <h2 style="font-size: 20px;" class="disc4">Siomay Campur Bandung</h2>
+
+        <img src="images/tempemendoan.jpg" width="315" alt="tempe mendoan dish" class="appetizer5">
+        <h2 style="font-size: 20px;" class="disc5">Tempe Mendoan</h2>
+
+        <img src="images/friedspringroll.jpg" width="315" alt="Fried Spring Roll" class="appetizer6">
+        <h2 style="font-size: 20px;" class="disc6">Fried Spring Roll</h2>
+
+        <img src="images/chickenandfishtofu.jpg" width="315" alt="Chicken and Fish tofu" class="appetizer7">
+        <h2 style="font-size: 20px;" class="disc7">Chicken and Fish Tofu</h2>
+
+
+        <!------------------------------------------------------------------------------------------------------------------>
+
+        <h1 class="heading2" style="font-size:50px; padding-top:20px;">Meat & Seafood</h1>
+
+        <img src="images/nasigoreng.jpg" width="800px" alt="ayam goreng balado  dish" class="meat1">
+        <h2 style="font-size: 20px;" class="mdisc1">Ayam Goreng Balado</h2>
+
+        <img src="images/ayamcabeijo.jpg" width="315px" alt="ayam cabe ijo dish" class="meat2">
+        <h2 style="font-size: 20px;" class="mdisc2">Ayam Cabei Jo</h2>
+
+        <img src="images/empekempekpalembang.jpg" width="315px" alt="empek empek palemeng dish" class="meat3">
+        <h2 style="font-size: 20px;" class="mdisc3">Empek-Empek Palembang</h2>
+
+        <img src="images/ikanbakarkecap.jpg" width="315px" alt="ikan bakar kecap dish" class="meat4">
+        <h2 style="font-size: 20px;" class="mdisc4">Ikan Bakar Kecap</h2>
+
+        <img src="images/ikangorenglalapan.jpg" width="315px" alt="ikan goreng lalapan dish" class="meat5">
+        <h2 style="font-size: 20px;" class="mdisc5">Ikan Goreng Lalapan</h2>
+
+        <img src="images/rendangsapi.jpg" width="315" alt="rendang sapi" class="meat6">
+        <h2 style="font-size: 20px;" class="mdisc6">Rendang Sapi</h2>
+
+
+        <img src="images/ayamgorengmbokberek.jpg" width="315" alt="Ayam Goreng Mbok Berek" class="meat7">
+        <h2 style="font-size: 20px;" class="mdisc7">Ayam Goreng Mbok Berek</h2>
+
+
+        <img src="images/minirijsttafelayammbokberek.jpg" width="415" alt="Mini Rijsttafel Ayam Mbok Berek" class="meat8">
+        <h2 style="font-size: 20px;" class="mdisc8">Mini Rijsttafel Ayam Mbok Berek</h2>
+
+        <img src="images/minirijsttafelrendangbeef.jpg" width="315" alt="Mini Rijsttafel Rendang Beef" class="meat9">
+        <h2 style="font-size: 20px;" class="mdisc9">Mini Rijsttafel Rendang Beef</h2>
+
+
+        <!------------------------------------------------------------------------------------------------------------------>
+
+        <h1 class="heading3" style="font-size:50px; padding-top:20px;">Rice & Noodle</h1>
+
+        <img src="images/realnoodles.jpg" width="800px" alt="Bakmi Goreng Jawa" class="rice1">
+        <h2 style="font-size: 20px;" class="rdisc1">Bakmi Goreng Jawa</h2>
+
+        <img src="images/bihunbakso.jpg" width="315px" alt="bihun bakso" class="rice2">
+        <h2 style="font-size: 20px;" class="rdisc2">Bihun Bakso</h2>
+
+
+        <img src="images/nasikuningkomplit.jpg" width="315px" alt="Nasi Kuning Komplit" class="rice3">
+        <h2 style="font-size: 20px;" class="rdisc3">Nasi Kuning Komplit</h2>
+
+
+        <img src="images/nasigorengindonesia.jpg" width="315px" alt=" Nasi Goreng Indonesia" class="rice4">
+        <h2 style="font-size: 20px;" class="rdisc4">Nasi Goreng Indonesia</h2>
+
+
+
+
+    </div>
+</body>
+
+</html>
