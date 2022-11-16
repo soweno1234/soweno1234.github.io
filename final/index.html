@@ -41,9 +41,8 @@
             grid-column: 2/ span 3;
             grid-row: 2;
             z-index: 2;
-            top: 27%;
+            top: 28.5%;
             position: relative;
-            left: 3%;
             opacity: 95%;
         }
         
@@ -58,10 +57,10 @@
             font-weight: 600;
             font-style: normal;
             grid-row: 3;
-            grid-column: 2 ;
+            grid-column: 2 / span 3;
             position: relative;
             padding-top: 20px;
-            left: 50%;
+  
         }
         
         .title {
@@ -85,7 +84,6 @@
             grid-column: 1/ span 4;
             grid-row: 2;
             padding: 60px;
-            left: 1%;
             z-index: 3;
             top: 23%;
             position: relative;
@@ -102,12 +100,12 @@
             position: relative;
             left: 15%;
             z-index: 0;
+          
         }
         
         .img1 {
             position: relative;
             top: 8%;
-            left: 5%;
             grid-column: 1 /span 2;
             grid-row: 5;
             z-index: 1;
@@ -119,7 +117,7 @@
             grid-row: 5;
             position: relative;
             top: 20%;
-            left: -35%;
+            left: 37%;
         }
         
         .content2 {
@@ -127,7 +125,7 @@
             grid-row: 6;
             position: relative;
             z-index: 0;
-            margin-top: 250px;
+            margin-top: 150px;
         }
         
         .support2 {
@@ -136,25 +134,19 @@
             grid-row: 6;
             position: relative;
             top: 40%;
-            left: 65%;
+            left: 30%;
         }
         
         .img2 {
             position: relative;
-            top: 10%;
+            top: 20%;
             left: 80%;
             grid-column: 2;
             grid-row: 6;
             z-index: 1;
         }
         
-        .border1 {
-            grid-column: 1;
-            grid-row: 1 / span 5;
-            z-index: 10;
-            position: relative;
-            top: 116px;
-        }
+    
     </style>
 
 
@@ -164,11 +156,7 @@
 
     <div class="grid-container">
 
-        <!--
-        <div class="title-image">
-            <img style="width: 180%; padding-top: 50px;" src="images/titleimage.jpg">
-        </div>-->
-
+  
 
         <div class="grid-item navmenu">
             <a class="active" href="index.html">Home</a>
@@ -176,10 +164,6 @@
             <a href="aboutus.html">About Us</a>
             <a href="rooms.html">Private Rooms</a>
         </div>
-
-        <!--
-        <div class="border1" style="width: 16.5%;height:2000px; border:1px solid black; background-color: black;"></div>
--->
 
 
         <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
@@ -189,18 +173,27 @@
         </div>
 
 
+
+
+
         <div class="grid-item main-image">
-            <img style="position: relative; top: 1%;" width="40%" height="220px" src="images/logowhite.png">
+            <img style="position: relative;" width="40%" height="220px" src="images/logowhite.png">
         </div>
 
         <div class="rectangle">
-            <div style="position: relative;  width: 60%;height:280px; border:1px solid #a61b1b; border-radius: 5px; background-color: #a61b1b;"></div>
+            <div style="position: relative;  width: 80%;height:240px; border:1px solid #a61b1b; border-radius: 7px; background-color: #a61b1b;"></div>
         </div>
 
 
+
+
+
+
+
+
         <div class="banner">
-            <div style="width: 50%;height:65px; border:1px solid #efebda; background-color: #efebda;">
-                <h3 style="font-size: 23px; position: relative; text-align: center; margin-top: 18px;">Check out new items on the <a style="color: black;" href="menu.html">menu</a>!</h3>
+            <div style="width: 80%;height:65px; border:1px solid #efebda; background-color: #efebda;">
+                <h3 style="font-size: 23px; position: relative; text-align: center; margin-top: 18px;">Check out new items on the menu!</h3>
             </div>
         </div>
 
@@ -209,18 +202,18 @@
 
 
 
-        <div class="content1" style="width: 75%;height:670px; border:1px solid #efebda; background-color: #efebda;"></div>
+        <div class="content1" style="width: 85%;height:600px; border:1px solid #efebda; background-color: #efebda;"></div>
         <h1 style="font-size:55px; margin-top: 25px;" class="support1">An Indonesian <br> Legacy.</h1>
-        <h3 style="font-size:20px; margin-top: 250px;" class="support1">Indo Cafe marries traditional authentic Indonesian cuisine with modern innovation and presentation.</h3>
-        <button style="margin-top: 370px;" onclick="location.href='aboutus.html';" class="button support1"><span>Learn more</span></button>
-        <img src="images/story.jpg" width="80%" alt="picture of restaurant" class="img1">
+        <h3 style="font-size:20px; margin-top: 180px;" class="support1">Indo Cafe marries traditional authentic Indonesian cuisine with modern innovation and presentation.</h3>
+        <button style="margin-top: 250px;" onclick="location.href='aboutus.html';" class="button support1"><span>Learn more</span></button>
+        <img src="images/story.jpg" width="130%" alt="picture of restaurant" class="img1">
 
 
 
-        <div class="content2" style="width: 90%;height:650px; border:1px solid #efebda; background-color: #efebda;"></div>
+        <div class="content2" style="width: 100%;height:100%; border:1px solid #efebda; background-color: #efebda;"></div>
         <h1 style="font-size:55px; margin-top: 25px;" class="support2">The art of Sate Ayam.</h1>
         <h3 style="font-size:20px; margin-top: 180px;" class="support2">Grilled marinated chicken skewers, topped with homemade peanut sauce and sweet soy sauce. Explore more food items.</h3>
-        <button style="margin-top:300px;" onclick="location.href='menu.html';" class="button support2"><span>Menu</span></button>
+        <button style="margin-top:320px;" onclick="location.href='menu.html';" class="button support2"><span>Menu</span></button>
         <img src="images/REALKABOB.jpg" width="200%" alt="sate ayam dish" class="img2">
 
 
