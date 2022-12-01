@@ -1,0 +1,118 @@
+body {
+    background-color: gray;
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightsalmon;
+    margin: 40px auto;
+    animation-name: square-to-circle;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 60px auto;
+    animation-name: circle-to-square;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 60px auto;
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: lightsalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: darksalmon;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: salmon;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: darksalmon;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50%;
+        background-color: lightsalmon;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes circle-to-square {
+    0% {
+        border-radius: 50%;
+        background-color: #3456eb;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 50% 50% 0;
+        background-color: blue;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: darkblue;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 0 0 0;
+        background-color: blue;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 0;
+        background-color: #3456eb;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-color:red;
+    } 
+    25% {
+        background-color:yellow; 
+    }
+    50% {
+        background-color:blue; 
+    } 
+    75% {
+        background-color:green; 
+    }
+    100% {
+        background-color:red;
+    }
+  }
