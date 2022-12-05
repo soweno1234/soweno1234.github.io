@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IndoCafe</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/fer0lfx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mry8kui.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bdg6urs.css">
+
+
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 20% auto auto auto;
+            grid-template-rows: auto auto auto auto auto;
+        }
+        
+        .grid-item {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        .navmenu {
+            grid-column: 1/ span 4;
+            grid-row: 1;
+        }
+        
+        .rectangle {
+            grid-column: 2/ span 3;
+            grid-row: 2;
+            z-index: 2;
+            top: 28.5%;
+            position: relative;
+            opacity: 100%;
+        }
+        
+        .order {
+            grid-column: 4;
+            grid-row: 1;
+            margin: 30px;
+        }
+        
+        .banner {
+            font-family: basic-sans, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            grid-row: 3;
+            grid-column: 2 / span 3;
+            position: relative;
+            padding-top: 20px;
+  
+        }
+        
+        .title {
+            grid-column: 1 /span 4;
+            grid-row: 4;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 55px;
+        }
+        
+     
+        
+        .main-image {
+            grid-column: 1/ span 4;
+            grid-row: 2;
+            padding: 60px;
+            z-index: 3;
+            top: 23%;
+            position: relative;
+        }
+        
+        
+        
+     
+       
+        
+    
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+  
+
+        <div class="grid-item navmenu">
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="rooms.html">Private Rooms</a>
+        </div>
+
+
+        <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
+
+        <div class="header-image">
+            <img src="images/tennis.jpg" alt="indonesian food" width="100%" height="800px">
+        </div>
+
+        <div class="grid-item main-image">
+            <h1 style="font-size: 160px;">Tennis</h1>
+        </div>
+
+        <div class="rectangle">
+            <div style="position: relative;  width: 80%;height:240px; border:1px solid darkgrey; border-radius: 7px; background-color: darkgrey;"></div>
+        </div>
+   
+        <h1 class="title" style="font-size:70px; padding-top:20px;">How was tennis created?</h1>
+
+        <p style="font-size:20px; padding-top:20px;">Tennis was originally created around the 12-13th century, and it was inspired based on a French handball game called "jeu de paume." In this French game, the ball was struck with the hand instead of a racuqet. This game was first played by Europmean monks for entertainment. Later, the leather glove came into use. Then a handle was added to the glove, which eventually created the tennis raquet that we know today.</p>
+
+
+
+    </div>
+</body>
+
+
+
+</html>
