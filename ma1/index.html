@@ -22,8 +22,8 @@
         .grid-container {
             display: grid;
             grid-gap: 10px;
-            grid-template-columns: 20% auto auto auto;
-            grid-template-rows: auto auto auto auto auto;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
         }
         
         .grid-item {
@@ -43,13 +43,9 @@
             z-index: 2;
             top: 28.5%;
             position: relative;
+            left: -10%;
             opacity: 95%;
-        }
-        
-        .order {
-            grid-column: 4;
-            grid-row: 1;
-            margin: 30px;
+            
         }
         
         .banner {
@@ -60,6 +56,7 @@
             grid-column: 2 / span 3;
             position: relative;
             padding-top: 20px;
+            left: -5%;
   
         }
         
@@ -81,14 +78,15 @@
         }
         
         .main-image {
-            grid-column: 1/ span 4;
+            grid-column: 2;
             grid-row: 2;
             padding: 60px;
             z-index: 3;
             top: 33%;
+            left: 8%;
             position: relative;
-            font-size: 200px;
             color: white;
+            
         }
         
         .slideshow {
@@ -100,15 +98,15 @@
             grid-column: 2/span 4;
             grid-row: 5;
             position: relative;
-            left: 15%;
+            left: 10%;
             z-index: 0;
           
         }
         
         .img1 {
             position: relative;
-            top: 15%;
-            left: 5%;
+            top: 4%;
+            left: 15%;
             grid-column: 1 /span 2;
             grid-row: 5;
             z-index: 1;
@@ -120,7 +118,7 @@
             grid-row: 5;
             position: relative;
             top: 20%;
-            left: 30%;
+            left: -30%;
         }
         
         .content2 {
@@ -133,17 +131,17 @@
         
         .support2 {
             z-index: 1;
-            grid-column: 1 / span 2;
+            grid-column: 1;
             grid-row: 6;
             position: relative;
             top: 40%;
-            left: 2%;
+            left: 30%;
         }
         
         .img2 {
             position: relative;
-            top: 20%;
-            left: 70%;
+            top: 10%;
+            left: 50%;
             grid-column: 2;
             grid-row: 6;
             z-index: 1;
@@ -169,22 +167,21 @@
         </div>
 
 
-        <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
 
         <div class="header-image">
             <img src="images/tennis.jpg" alt="indonesian food" width="100%" height="800px">
         </div>
 
         <div class="grid-item main-image">
-            <h2>The Game of Tennis</h2>
+            <h1>The Game of Tennis</h1>
         </div>
 
         <div class="rectangle">
-            <div style="position: relative;  width: 80%;height:240px; border:1px solid grey; border-radius:7px; background-color: grey;"></div>
+            <div style="position: relative;  width: 80%;height:30%; border:1px solid grey; border-radius:7px; background-color: grey;"></div>
         </div>
 
         <div class="banner">
-            <div style="width: 80%;height:65px; border:1px solid #efebda; background-color: #efebda;">
+            <div style="width: 70%;height:65px; border:1px solid #efebda; background-color: #efebda;">
                 <h3 style="font-size: 23px; position: relative; text-align: center; margin-top: 18px;">Tennis has had a long history around the world...</h3>
             </div>
         </div>
@@ -196,17 +193,17 @@
 
         <div class="content1" style="width: 85%;height:600px; border:1px solid #efebda; background-color: #efebda;"></div>
         <h1 style="font-size:45px; margin-top: 25px;" class="support1">How was tennis created?</h1>
-        <h3 style="font-size:20px; margin-top: 100px;" class="support1">Tennis was originally created around the 12-13th century, and it was inspired based on a French handball game called "jeu de paume." In this French game, the ball was struck with the hand instead of a racuqet. This game was first played by European monks for entertainment. Later, the leather glove came into use. Then a handle was added to the glove, which eventually created the tennis raquet that we know today.</h3>
-        <button style="margin-top: 250px;" onclick="location.href='aboutus.html';" class="button support1"><span>Learn more</span></button>
-        <img src="images/tennis2.jpg" width="700" alt="picture of restaurant" class="img1">
+        <h3 style="font-size:20px; margin-top: 150px;" class="support1">Tennis has roots back to the ancient Mediterranean, but it was truly popularized in the 11th and 12th centuries when monks and members of French court took a liking to the game.</h3>
+        <button style="margin-top:300px;" onclick="location.href='menu.html';" class="button support1"><span>Learn more</span></button>
+        <img src="images/tennis2.jpg" width="550" height="550" alt="picture of tennis court" class="img1">
 
 
 
         <div class="content2" style="width: 100%;height:100%; border:1px solid #efebda; background-color: #efebda;"></div>
         <h1 style="font-size:55px; margin-top: 25px;" class="support2">How do you play tennis?</h1>
-        <h3 style="font-size:20px; margin-top: 180px;" class="support2">Tennis is played on a rectangular court, with two game styles: singles and doubles. In singles, there are 2 people on a court at once, one person on each side. You are awarded points when your opponent fails to hit the ball back to your side of the court. This can happen if they hit the ball into the net, or outside of the court boundaries. You win a tennis match by getting to a certain number of points before your opponent does. This means there is no time limit to tennis matches, so they will keep going until one person gets the certain amount of points. </h3>
-        <button style="margin-top:320px;" onclick="location.href='menu.html';" class="button support2"><span>Menu</span></button>
-        <img src="images/tennis3.jpg" width="600" alt="sate ayam dish" class="img2">
+        <h3 style="font-size:20px; margin-top: 180px;" class="support2">Tennis has many rules and they are difficult to remember at first. But once the rules are understood, the game becomes very fun.</h3>
+        <button style="margin-top:280px;" onclick="location.href='menu.html';" class="button support2"><span>Learn more</span></button>
+        <img src="images/tennis3.jpg" width="500" height="700" alt="rodger federer" class="img2">
 
 
 
