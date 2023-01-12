@@ -5,11 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us</title>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fer0lfx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mry8kui.css">
 </head>
 
 <body>
+    <div class="grid-container">
 
+        <div w3-include-html="nav.html"></div>
+        <h1>Contact Us🌳</h1>
+
+
+        <div class="content1" style="width: 100%;height:350px; border:1px solid lightgreen; background-color: lightgreen;">
+            <form style="margin:30px;" action=" ">
+                <label for="fname ">First and last name:</label>
+                <input type="text ">
+                <br>
+                <br>
+                <br>
+                <label for="age ">Phone Number:</label>
+                <input type="text ">
+                <br>
+                <br>
+                <br>
+                <label for="lname ">Email:</label>
+                <input type="text ">
+                <br>
+                <br>
+                <br>
+                <label for="address ">Message:</label>
+                <input style="height:50px" type="text ">
+
+                <br>
+                <br>
+                <input type="button" value="SUBMIT" onclick="truthAndLie();">
+
+
+            </form>
+        </div>
+
+
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <script type="text/javascript " src="js/script.js "></script>
+
+
+
+    </div>
 </body>
 
 </html>
