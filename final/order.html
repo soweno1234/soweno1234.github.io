@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IndoCafe</title>
+    <title>Soren's Truth and Lie Game</title>
 
 
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/fer0lfx.css">
     <link rel="stylesheet" href="https://use.typekit.net/mry8kui.css">
+
+
 
 
 </head>
@@ -33,132 +35,16 @@
         grid-column: 1/ span 4;
         grid-row: 1;
     }
-    
-    .order {
-        grid-column: 4;
-        grid-row: 1;
-        margin-top: 30px;
-        margin-right: 30px;
-    }
-    
-    input[type=text],
-    select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    
-    .container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        user-select: none;
-    }
-    
-    .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
-    /* Create a custom radio button */
-    
-    .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        border-radius: 50%;
-    }
-    /* On mouse-over, add a grey background color */
-    
-    .container:hover input~.checkmark {
-        background-color: #ccc;
-    }
-    /* When the radio button is checked, add a blue background */
-    
-    .container input:checked~.checkmark {
-        background-color: #2196F3;
-    }
-    /* Create the indicator (the dot/circle - hidden when not checked) */
-    
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-    /* Show the indicator (dot/circle) when checked */
-    
-    .container input:checked~.checkmark:after {
-        display: block;
-    }
-    /* Style the indicator (dot/circle) */
-    
-    .container .checkmark:after {
-        top: 9px;
-        left: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: white;
-    }
-    
-    .main-image {
-        grid-column: 1;
-        grid-row: 2;
-        z-index: 3;
-        position: relative;
-        top: 1%;
-        left: -13%;
-    }
-    
-    .rectangle {
-        grid-column: 1;
-        grid-row: 2;
-        z-index: 2;
-        position: relative;
-        opacity: 100%;
-        left: 4%;
-        top: 1%;
-    }
-    
-    .intro {
-        grid-column: 1;
-        grid-row: 2 / span 3;
-        position: relative;
-        left: 5%;
-        top: 13%;
-    }
-    
-    .submit {
-        grid-column: 1;
-        grid-row: 2 /span 3;
-        position: relative;
-        left: 5%;
-        top: 35%;
-    }
-    
-    .appetizers {
-        grid-column: 2;
-        grid-row: 2;
-        position: relative;
-        left: 40%;
-    }
 </style>
 
 <body>
 
     <div class="grid-container">
 
-
+        <!--
+        <div class="title-image">
+            <img style="width: 180%; padding-top: 50px;" src="images/titleimage.jpg">
+        </div>-->
 
 
         <div class="grid-item navmenu">
@@ -168,144 +54,130 @@
             <a href="rooms.html">Private Rooms</a>
         </div>
 
+        <!--
+        <div class="border1" style="width: 16.5%;height:2000px; border:1px solid black; background-color: black;"></div>
+-->
+
 
         <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
         <br>
         <br>
 
+        <form action="">
+            <label for="fname">First Name:</label>
+            <input type="text" name="greet" id="fname">
+            <br>
 
-        <div class="grid-item main-image">
-            <img style="position: relative;" width="240px" height="110px" src="images/logowhite.png">
-        </div>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="greet" id="lname" placeholder="Your Last Name...">
+            <br>
 
-        <div class="rectangle">
-            <div style="position: relative;  width: 340px;height:150px; border:1px solid #a61b1b; border-radius: 5px;   ; background-color: #a61b1b;"></div>
-        </div>
-
-        <div class="intro">
-            <form action="">
-                <label for="fname">First Name:</label>
-                <input type="text" name="greet" id="fname" placeholder="Your First Name...">
-                <br>
-
-                <label for="lname">Last Name:</label>
-                <input type="text" name="greet" id="lname" placeholder="Your Last Name...">
-                <br>
-
-                <label for="age">Age:</label>
-                <input type="text" name="greet" id="age" placeholder="Your Age...">
-                <br>
+            <label for="age">Age:</label>
+            <input type="text" name="greet" id="age">
+            <br>
 
 
 
-                <label for="address">Address:</label>
-                <input type="text" name="greet" id="address" placeholder="Your Address...">
-                <br>
-            </form>
-
-        </div>
-        <div class="submit">
-            <input class="button" type="button" value="SUBMIT" onclick="truthAndLie();">
-            <p id="truth-answer"></p>
-        </div>
+            <label for="address">Address:</label>
+            <input type="text" name="greet" id="address">
+            <br>
+        </form>
         <br>
+        <input type="button" value="SUBMIT" onclick="truthAndLie();">
+        <p id="truth-answer"></p>
+        <br>
+        <h2>Appetizers</h2>
 
-        <div class="appetizers">
-            <h2>Appetizers</h2>
-
-            <form action="">
+        <form action="">
 
 
-                <label class="container" for="SateAyam">Sate Ayam
+            <label class="container" for="SateAyam">Sate Ayam
                 <input type="radio"  name="Appetizers" id="SateAyam">
                 <span class="checkmark"></span>
             </label>
-                <br>
+            <br>
 
-                <label class="container" for="PangsitGoreng">Pangsit Goreng 
+            <label class="container" for="PangsitGoreng">Pangsit Goreng 
                 <input type="radio" name="Appetizers" id="PangsitGoreng">
                 <span class="checkmark"></span>
             </label>
-                <br>
+            <br>
 
-                <label class="container" for="TempeMendoan">Tempe Mendoan 
+            <label class="container" for="TempeMendoan">Tempe Mendoan 
                 <input type="radio" name="Appetizers" id="TempeMendoan">
                 <span class="checkmark"></span>
             </label>
-                <br>
+            <br>
 
-                <label class="container" for="Risoles">Risoles<input type="radio" name="Appetizers" id="Risoles"><span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="Risoles">Risoles<input type="radio" name="Appetizers" id="Risoles"><span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="SiomayCampurBandung">Siomay Campur Bandung  <input type="radio" name="Appetizers" id="SiomayCampurBandung"> <span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="SiomayCampurBandung">Siomay Campur Bandung  <input type="radio" name="Appetizers" id="SiomayCampurBandung"> <span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="FriedSpringRoll">Fried Spring Roll<input type="radio" name="Appetizers" id="FriedSpringRoll"> <span class="checkmark"></span> </label>
-                <br>
+            <label class="container" for="FriedSpringRoll">Fried Spring Roll<input type="radio" name="Appetizers" id="FriedSpringRoll"> <span class="checkmark"></span> </label>
+            <br>
 
-                <label class="container" for="ChickenandFishTofu">Chicken and Fish Tofu   <input type="radio" name="Appetizers" id="ChickenandFishTofu">  <span class="checkmark"></span></label>
-
-
-                <br>
+            <label class="container" for="ChickenandFishTofu">Chicken and Fish Tofu   <input type="radio" name="Appetizers" id="ChickenandFishTofu">  <span class="checkmark"></span></label>
 
 
-
-                <h2>Meat & Seafood</h2>
+            <br>
 
 
 
-                <span class="checkmark"></span>
+            <h2>Meat & Seafood</h2>
 
-                <label class="container" for="AyamGorengBalado">Ayam Goreng Balado<input type="radio" name="meat" id="AyamGorengBalado"><span class="checkmark"></span></label>
-                <br>
 
-                <label class="container" for="AyamCabeiJo">Ayam Cabei Jo      <input type="radio" name="meat" id="AyamCabeiJo"><span class="checkmark"></span>
+
+            <span class="checkmark"></span>
+
+            <label class="container" for="AyamGorengBalado">Ayam Goreng Balado<input type="radio" name="meat" id="AyamGorengBalado"><span class="checkmark"></span></label>
+            <br>
+
+            <label class="container" for="AyamCabeiJo">Ayam Cabei Jo      <input type="radio" name="meat" id="AyamCabeiJo"><span class="checkmark"></span>
             </label>
-                <br>
+            <br>
 
-                <label class="container" for="IkanBakarKecap">Ikan Bakar Kecap<input type="radio" name="meat" id="IkanBakarKecap">
+            <label class="container" for="IkanBakarKecap">Ikan Bakar Kecap<input type="radio" name="meat" id="IkanBakarKecap">
                 <span class="checkmark"></span></label>
-                <br>
+            <br>
 
-                <label class="container" for="EmpekEmpekPalembang">Empek-Empek Palembang<input type="radio" name="meat" id="EmpekEmpekPalembang">  <span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="EmpekEmpekPalembang">Empek-Empek Palembang<input type="radio" name="meat" id="EmpekEmpekPalembang">  <span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="IkanGorengLalapan">Ikan Goreng Lalapan  <input type="radio" name="meat" id="IkanGorengLalapan">
+            <label class="container" for="IkanGorengLalapan">Ikan Goreng Lalapan  <input type="radio" name="meat" id="IkanGorengLalapan">
                 </label>
-                <br>
+            <br>
 
-                <label class="container" for="MiniRijsttafelAyamMbokBerek">Mini Rijsttafel Ayam Mbok Berek<input type="radio" name="meat" id="MiniRijsttafelAyamMbokBerek">            <span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="MiniRijsttafelAyamMbokBerek">Mini Rijsttafel Ayam Mbok Berek<input type="radio" name="meat" id="MiniRijsttafelAyamMbokBerek">            <span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="MiniRijsttafelRendangBeef">Mini Rijsttafel Rendang Beef<input type="radio" name="meat" id="MiniRijsttafelRendangBeef"><span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="MiniRijsttafelRendangBeef">Mini Rijsttafel Rendang Beef<input type="radio" name="meat" id="MiniRijsttafelRendangBeef"><span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="RendangSapi">Rendang Sapi<input type="radio" name="meat" id="RendangSapi"> <span class="checkmark"></span></label>
-                <br>
+            <label class="container" for="RendangSapi">Rendang Sapi<input type="radio" name="meat" id="RendangSapi"> <span class="checkmark"></span></label>
+            <br>
 
-                <label class="container" for="AyamGorengMbokBerek">Ayam Goreng Mbok Berek<input type="radio" name="meat" id="AyamGorengMbokBerek"> <span class="checkmark"></span></label>
+            <label class="container" for="AyamGorengMbokBerek">Ayam Goreng Mbok Berek<input type="radio" name="meat" id="AyamGorengMbokBerek"> <span class="checkmark"></span></label>
 
-                <br>
-                <h2>Rice & Noodle</h2>
-
-                <label class="container" for="BakmiGorengJawa">Bakmi Goreng Jawa<input type="radio" name="rice" id="BakmiGorengJawa"><span class="checkmark"></span></label>
-                <br>
-
-                <label class="container" for="BihunBakso">Bihun Bakso<input type="radio" name="rice" id="BihunBakso"><span class="checkmark"></span></label>
-                <br>
-
-                <label class="container" for="NasiKuningKomplit">Nasi Kuning Komplit<input type="radio" name="rice" id="NasiKuningKomplit"><span class="checkmark"></span></label>
-                <br>
-
-                <label class="container" for="NasiGorengIndonesia">Nasi Goreng Indonesia<input type="radio" name="rice" id="NasiGorengIndonesia"><span class="checkmark"></span></label>
-                <br>
-                <br>
-                <input type="button" value="SUBMIT" onclick="truthAndLie1();">
-                <p id="truth-answer1"></p>
-            </form>
-        </div>
-
-
+            <br>
+            <h2>Rice & Noodle</h2>
+            <input type="radio" name="rice" id="BakmiGorengJawa">
+            <label for="BakmiGorengJawa">Bakmi Goreng Jawa</label>
+            <br>
+            <input type="radio" name="rice" id="BihunBakso">
+            <label for="BihunBakso">Bihun Bakso</label>
+            <br>
+            <input type="radio" name="rice" id="NasiKuningKomplit">
+            <label for="NasiKuningKomplit">Nasi Kuning Komplit</label>
+            <br>
+            <input type="radio" name="rice" id="NasiGorengIndonesia">
+            <label for="NasiGorengIndonesia">Nasi Goreng Indonesia</label>
+            <br>
+            <br>
+            <input type="button" value="SUBMIT" onclick="truthAndLie1();">
+            <p id="truth-answer1"></p>
+        </form>
         <script src=" js/order.js "></script>
     </div>
 </body>

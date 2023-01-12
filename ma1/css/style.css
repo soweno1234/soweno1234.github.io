@@ -1,18 +1,3 @@
-/* body {
-    background-color: rgba(243, 236, 225, 0);
-    background-image: url('https://static.wixstatic.com/media/097153ab77224f2b909fea1e1992b7f6.jpg/v1/fill/w_1519,h_590,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/097153ab77224f2b909fea1e1992b7f6.jpg');
-    background-size: 1400px;
-    width: 1000px;
-    height: 500px;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}*/
-
-
-
 .navmenu {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -58,7 +43,7 @@
 
 h1,
 h2 {
-    font-family: calluna, serif;
+    font-family: bilo,sans-serif;
     font-weight: 600;
     font-style: normal;
 }
