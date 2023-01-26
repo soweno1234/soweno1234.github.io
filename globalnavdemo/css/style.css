@@ -1,0 +1,30 @@
+.menu-item {
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+    font-family: calluna, serif;
+    font-weight: 599;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#nav {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    list-style-type: none;
+}
+
+#nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px 16px;
+    list-style-type: none;
+}

@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Order - IndoCafe</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soren's Truth and Lie Game</title>
 
 
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
@@ -20,61 +18,33 @@
 </head>
 
 <style>
-    .navmenu {
-        grid-column: 1/ span 4;
-        grid-row: 1;
-    }
-
     .grid-container {
         display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 20% auto auto auto;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
     }
-
+    
     .grid-item {
         text-align: center;
         font-size: 30px;
         padding: 20px;
     }
-
-    .order {
-        grid-column: 4;
+    
+    .navmenu {
+        grid-column: 1/ span 4;
         grid-row: 1;
-        margin: 30px;
     }
-
-    .intro {
-        grid-column: 1 ;
-        grid-row: 2 / span 4;
-        padding-left: 10%;
-    }
-
-    .submit1 {
-        grid-column: 1 ;
-        grid-row: 2 / span 4;
-        padding-left: 2%;
-    }
-
-    .food {
-        grid-column: 1 ;
-        grid-row: 4 / span 5;
-        padding-left: 2%;
-    }
-
-    .submit2 {
-        grid-column: 1 ;
-        grid-row: 6;
-        padding-left: 2%;
-    }
-        
 </style>
 
 <body>
 
     <div class="grid-container">
 
-        
+        <!--
+        <div class="title-image">
+            <img style="width: 180%; padding-top: 50px;" src="images/titleimage.jpg">
+        </div>-->
 
 
         <div class="grid-item navmenu">
@@ -84,24 +54,25 @@
             <a href="rooms.html">Private Rooms</a>
         </div>
 
-
+        <!--
+        <div class="border1" style="width: 16.5%;height:2000px; border:1px solid black; background-color: black;"></div>
+-->
 
 
         <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
         <br>
         <br>
 
-        <div class="intro">
         <form action="">
             <label for="fname">First Name:</label>
             <input type="text" name="greet" id="fname">
             <br>
 
             <label for="lname">Last Name:</label>
-            <input type="text" name="greet" id="lname">
+            <input type="text" name="greet" id="lname" placeholder="Your Last Name...">
             <br>
 
-            <label for="age">Age:</label> <br>
+            <label for="age">Age:</label>
             <input type="text" name="greet" id="age">
             <br>
 
@@ -111,70 +82,83 @@
             <input type="text" name="greet" id="address">
             <br>
         </form>
-        </div>
-    </div>
         <br>
-
-        <div class="submit1">
         <input type="button" value="SUBMIT" onclick="truthAndLie();">
-        <p style="padding-top: 10px;"  id="truth-answer"></p>
-    </div>
+        <p id="truth-answer"></p>
         <br>
-       
-        <div class="food">
-            <h2>Appetizers</h2>
+        <h2>Appetizers</h2>
 
         <form action="">
-            <input type="radio" name="Appetizers" id="SateAyam">
-            <label for="SateAyam">Sate Ayam</label>
+
+
+            <label class="container" for="SateAyam">Sate Ayam
+                <input type="radio"  name="Appetizers" id="SateAyam">
+                <span class="checkmark"></span>
+            </label>
             <br>
-            <input type="radio" name="Appetizers" id="PangsitGoreng">
-            <label for="PangsitGoreng">Pangsit Goreng</label>
+
+            <label class="container" for="PangsitGoreng">Pangsit Goreng 
+                <input type="radio" name="Appetizers" id="PangsitGoreng">
+                <span class="checkmark"></span>
+            </label>
             <br>
-            <input type="radio" name="Appetizers" id="TempeMendoan">
-            <label for="TempeMendoan">Tempe Mendoan</label>
+
+            <label class="container" for="TempeMendoan">Tempe Mendoan 
+                <input type="radio" name="Appetizers" id="TempeMendoan">
+                <span class="checkmark"></span>
+            </label>
             <br>
-            <input type="radio" name="Appetizers" id="Risoles">
-            <label for="Risoles">Risoles</label>
+
+            <label class="container" for="Risoles">Risoles<input type="radio" name="Appetizers" id="Risoles"><span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="Appetizers" id="SiomayCampurBandung">
-            <label for="SiomayCampurBandung">Siomay Campur Bandung</label>
+
+            <label class="container" for="SiomayCampurBandung">Siomay Campur Bandung  <input type="radio" name="Appetizers" id="SiomayCampurBandung"> <span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="Appetizers" id="FriedSpringRoll">
-            <label for="FriedSpringRoll">Fried Spring Roll</label>
+
+            <label class="container" for="FriedSpringRoll">Fried Spring Roll<input type="radio" name="Appetizers" id="FriedSpringRoll"> <span class="checkmark"></span> </label>
             <br>
-            <input type="radio" name="Appetizers" id="ChickenandFishTofu">
-            <label for="ChickenandFishTofu">Chicken and Fish Tofu</label>
+
+            <label class="container" for="ChickenandFishTofu">Chicken and Fish Tofu   <input type="radio" name="Appetizers" id="ChickenandFishTofu">  <span class="checkmark"></span></label>
 
 
             <br>
+
+
+
             <h2>Meat & Seafood</h2>
-            <input type="radio" name="meat" id="AyamGorengBalado">
-            <label for="AyamGorengBalado">Ayam Goreng Balado</label>
+
+
+
+            <span class="checkmark"></span>
+
+            <label class="container" for="AyamGorengBalado">Ayam Goreng Balado<input type="radio" name="meat" id="AyamGorengBalado"><span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="AyamCabeiJo">
-            <label for="AyamCabeiJo">Ayam Cabei Jo</label>
+
+            <label class="container" for="AyamCabeiJo">Ayam Cabei Jo      <input type="radio" name="meat" id="AyamCabeiJo"><span class="checkmark"></span>
+            </label>
             <br>
-            <input type="radio" name="meat" id="IkanBakarKecap">
-            <label for="IkanBakarKecap">Ikan Bakar Kecap</label>
+
+            <label class="container" for="IkanBakarKecap">Ikan Bakar Kecap<input type="radio" name="meat" id="IkanBakarKecap">
+                <span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="EmpekEmpekPalembang">
-            <label for="EmpekEmpekPalembang">Empek-Empek Palembang</label>
+
+            <label class="container" for="EmpekEmpekPalembang">Empek-Empek Palembang<input type="radio" name="meat" id="EmpekEmpekPalembang">  <span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="IkanGorengLalapan">
-            <label for="IkanGorengLalapan">Ikan Goreng Lalapan</label>
+
+            <label class="container" for="IkanGorengLalapan">Ikan Goreng Lalapan  <input type="radio" name="meat" id="IkanGorengLalapan">
+                </label>
             <br>
-            <input type="radio" name="meat" id="MiniRijsttafelAyamMbokBerek">
-            <label for="MiniRijsttafelAyamMbokBerek">Mini Rijsttafel Ayam Mbok Berek</label>
+
+            <label class="container" for="MiniRijsttafelAyamMbokBerek">Mini Rijsttafel Ayam Mbok Berek<input type="radio" name="meat" id="MiniRijsttafelAyamMbokBerek">            <span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="MiniRijsttafelRendangBeef">
-            <label for="MiniRijsttafelRendangBeef">Mini Rijsttafel Rendang Beef</label>
+
+            <label class="container" for="MiniRijsttafelRendangBeef">Mini Rijsttafel Rendang Beef<input type="radio" name="meat" id="MiniRijsttafelRendangBeef"><span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="RendangSapi">
-            <label for="RendangSapi">Rendang Sapi</label>
+
+            <label class="container" for="RendangSapi">Rendang Sapi<input type="radio" name="meat" id="RendangSapi"> <span class="checkmark"></span></label>
             <br>
-            <input type="radio" name="meat" id="AyamGorengMbokBerek">
-            <label for="AyamGorengMbokBerek">Ayam Goreng Mbok Berek</label>
+
+            <label class="container" for="AyamGorengMbokBerek">Ayam Goreng Mbok Berek<input type="radio" name="meat" id="AyamGorengMbokBerek"> <span class="checkmark"></span></label>
 
             <br>
             <h2>Rice & Noodle</h2>
@@ -191,11 +175,8 @@
             <label for="NasiGorengIndonesia">Nasi Goreng Indonesia</label>
             <br>
             <br>
-        </div>
-        <div class="submit2">
             <input type="button" value="SUBMIT" onclick="truthAndLie1();">
-            <p  style="padding-top:10px;"  id="truth-answer1"></p>
-        </div>
+            <p id="truth-answer1"></p>
         </form>
         <script src=" js/order.js "></script>
     </div>
