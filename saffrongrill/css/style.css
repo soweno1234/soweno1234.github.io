@@ -1,0 +1,83 @@
+/* body {
+    background-color: rgba(243, 236, 225, 0);
+    background-image: url('https://static.wixstatic.com/media/097153ab77224f2b909fea1e1992b7f6.jpg/v1/fill/w_1519,h_590,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/097153ab77224f2b909fea1e1992b7f6.jpg');
+    background-size: 1400px;
+    width: 1000px;
+    height: 500px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}*/
+
+
+
+.navmenu {
+    overflow: hidden;
+    background-color: white;
+}
+
+.navmenu a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 3px solid transparent;
+    transition-duration: 0.3s;
+}
+
+.navmenu a:hover {
+    border-bottom: 3px solid black;
+}
+
+    
+
+.button {
+    background-color: transparent;
+    color: black;
+
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 2px solid black;
+    height: 40px;
+    width: 170px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+h1,
+h2 {
+    font-family: "area-normal", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+h4,
+h5,
+h6 {
+    font-family: "area-normal", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+p,
+li,
+ul,
+button,
+span {
+    font-family: basic-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
