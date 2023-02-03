@@ -14,6 +14,12 @@
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/ojh0jme.css">
 
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+
+
+  
     <style>
         .grid-container {
             display: grid;
@@ -49,7 +55,7 @@
             font-style: normal;
             grid-row: 3;
             grid-column: 1 / span 3;
-            margin-left: 300px;
+            margin-left: 450px;
             margin-top: 20px;
             position: relative;
             padding-top: 20px;
@@ -87,39 +93,21 @@
             grid-row: 3;
             position: relative;
             top: 30%;
-            left: 10%;
+            left: 5%;
             color: white;
         }
         
         .img1 {
             position: relative;
             top: 15%;
-            left: 120%;
-            grid-column: 2;
+            left: -40%;
+            grid-column: 4;
             grid-row: 3;
             z-index: 1;
             color: white;
         }
 
-        .contact {
-            position: relative;
-            top: 15%;
-            left: 120%;
-            grid-column: 2;
-            grid-row: 3;
-            z-index: 1;
-            color: white;
-        }
-        .contact1 {
-            position: relative;
-            top: 15%;
-            left: 120%;
-            grid-column: 2;
-            grid-row: 3;
-            z-index: 1;
-            color: white;
-        }
-        
+   
         .content2 {
             grid-column: 1 /span 4;
             grid-row: 4;
@@ -139,11 +127,19 @@
         
         .img2 {
             position: relative;
-            grid-column: 1;
+            grid-column: 3;
             grid-row: 4;
             z-index: 1;
-            top: -25%;
-            left: 30%;
+            top: 0%;
+            left: 5%;
+        }
+        .img5 {
+            position: relative;
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            z-index: 1;
+            top: 20%;
+            left: 5%;
         }
         
         .content3 {
@@ -155,9 +151,14 @@
         }
 
         .img3 {
-            grid-column: 1 / span 4;
+            grid-column: 1;
             grid-row: 5;
         }
+        .img7 {
+            grid-column:  1 / span 4;
+            grid-row: 5;
+        }
+    
     </style>
 </head>
 
@@ -179,7 +180,7 @@
             </div>
         </div>
 
-        <button onclick="location.href='order.html';" class="button order"><span>Order Now</span></button>
+        <button onclick="location.href='https://www.doordash.com/en-US';" class="button order"><span>Order Now</span></button>
 
      
         <div class="banner">
@@ -189,38 +190,57 @@
         </div>
 
 
-        <div class="content1" style="width: 45%;height:400px; border:1px solid #e96f04; background-color: #e96f04;"></div>
-        <div class="img1" class="contact" style="height:489px;  margin-left: -5px; border:1px solid white; background-color: white;"></div>
-        <h2 style="font-size:30px; margin-top: 70px;" class="support1">Current Operating Hours</h1>
-
-
-        <h3 style="font-size:20px; margin-top: 150px;" class="support1"><b>SUN - THURS<br><br>FRI<br><br>SAT<br><br>HAPPY HOUR</b></h3>
-        <h3 style="font-size:20px; margin-top: 245px; margin-left: -550px;" class="img1">11 : 00 am - 10 : 00 pm<br><br>11 : 00 am - 10 : 30 pm<br><br>11 : 00 am - 10 : 15 pm<br><br>3 : 00 pm - 6 : 00 pm</h3>
-        <h2 style="font-size:30px; margin-top: 170px; color: #e96f04; margin-left: -100px;" class="contact">Contact & Location</h1>
-        <h3 style="font-size:20px; margin-top: 245px; color: #e96f04; margin-left: -100px;" class="contact">SAFFRON GRILL<br><br>2132 N NORTHGATE WAY<br><br>SEATTLE WA 98133<br><br>Free parking available</h3>
-        <h3 style="font-size:20px; margin-top: 245px; color: #e96f04; margin-left: 200px;" class="contact1">P: (206) 417 0707<br><br>F: (206) 417 1750<br><br><br><br></h3>
+        <div class="content1" style="width: 50%;height:375px; border:1px solid #e96f04; background-color: #e96f04;"></div>
+        <div class="img1" class="contact" style="height:400px;  top: 20%; margin-left: -5px; border:1px solid white; background-color: white;"></div>
+       
+       
+        <h2 style="font-size:30px; margin-top: 70px; " class="support1" >Current Operating Hours</h1>
+        <h3 style="font-size:20px; margin-top: 150px; " class="support1"><b>SUN - THURS<br><br>FRI<br><br>SAT<br><br>HAPPY HOUR</b></h3>
+        <h3 style="font-size:20px; margin-top: 150px; margin-left: 200px;" class="support1">11 : 00 am - 10 : 00 pm<br><br>11 : 00 am - 10 : 30 pm<br><br>11 : 00 am - 10 : 15 pm<br><br>3 : 00 pm - 6 : 00 pm</h3>
+        
+        
+        <h2 style="font-size:30px; margin-top: 170px; color: #e96f04; margin-left: 25px;" class="img1">Contact & Location</h1>
+        <h3 style="font-size:20px; margin-top: 245px; color: #e96f04; margin-left: 25px;" class="img1">SAFFRON GRILL<br><br>2132 N NORTHGATE WAY<br><br>SEATTLE WA 98133<br><br>Free parking available</h3>
+        <h3 style="font-size:20px; margin-top: 245px; color: #e96f04; margin-left: 290px;" class="img1">P: (206) 417 0707<br><br>F: (206) 417 1750<br><br><br><br></h3>
         
 
+        <h2 style="font-size:30px; top: 5%; color: #e96f04; left: -125%;" class="img2"><b>Welcome To Saffron Grill!</b></h1>
+            <h3 style="font-size:20px; top: 5%; color: #e96f04; left: 105%;" class="img5">Saffron Grill brings to the Northgate area an inventive fusion of Indian and Mediterranean
+                cuisine served in an inviting atmosphere that encourages you to linger.<br><br>
+                
+                While Saffron Grill may be new, owner Mohammed Bhatti has over 28 years' experience
+                serving Zagat-rated Indian and Mediterranean restaurants in Seattle and Chicago. You and your friends will delight in discovering new, innovative dishes expertly prepared by a chef
+                whose passion and expertise is unparalleled. Our menu features authentic North Indian and Mediterranean food in a bright and inviting setting.<br><br>
+                
+                Exclusive catering for Hilton and RedLion Hotel, Bellevue is taken care by Saffron Grill and Taste of India with a capacity of 350 people.<br><br>
+                
+                Join us for lunch, dinner, appetizers or a toast at our full bar - we have 100 types of imported beer, a dozen on tap, and an impressively extensive wine and cocktail selection.</h3>
+
+  <img src="images/outdoor.jpg" class="img5" style="width: 80%; margin-left: 20px;">
 
 
 
+  <div class="img3" style="width: 500%;height:400px; margin-top: 50px;border:1px solid #e96f04; background-color: #e96f04;"></div>
 
-        <div class="content2" style="width: 100%;height:650px; border:1px solid #c4122f; background-color: #c4122f;"></div>
-        <h1 style="font-size:55px; margin-top: 25px;" class="support2">Diversity and Culture.</h1>
-        <h3 style="font-size:20px; margin-top: 180px;" class="support2">The islands are inhabited by hundreds of tribes and thousands of sub-tribes with diverse cultures and languages. There is a national language spoken throughout the country, namely Bahasa Indonesia. It is thus appro - priate, that the country's
-            motto is Bhinneka Tunggal Ika, which means: Unity in Diversity. </h3>
-        <img src="images/culture.jpg" width="190%" alt="" class="img2">
-
-        <div class="content3" style="width: 100%;height:250px; border:1px solid #f3f2ef; background-color: #f3f2ef;">
-            <h1 style="font-size:55px; color: #8b0e04; text-align: center; margin-top: 50px;" class="support3">So, back to us...</h1>
-            <h3 class="support3" style="font-size: 30px; padding: 120   px;color: #8b0e04; text-align: center; padding-top: 20px;">Indo Cafe marries traditional authentic Indonesian cuisine with modern innovation and presentation. At Indo Cafe, we strive to bring you the diversity of our dishes so that our customers can appreciate the vast selections of food from different
-                parts of Indonesia. Come and discover the taste of Indonesia at Indo Cafe!</h3>
-               </div>
-   
-
-
+  <h2 style="font-size:30px; margin-top: 45%; color: white; margin-left: 20%;" class="img3">Catering</h2>
+        
+  <h3 style="font-size:25px; margin-top: 15%; color: white; margin-left: 4%; margin-right: 10%;" class="img7">Private Parties; Banquets, Delivery/Take Out; Corporate Catering and Events; <br> <br> Weddings Allow our friendly and professional staff to plan, organize and manage every aspect of your next event. We will do everything possible to make your next entertaining experience a success.
 
     </div>
+
+  
+
+    <footer class="page-footer bg-dark" style="text-align: center">
+
+        <div style="height: 50px;">
+
+            <p style="color:white;">COPYRIGHT 2023 SAFFRON GRILL</p>
+
+            
+
+        </div>
+
+    </footer>
 </body>
 
 </html>
