@@ -1,0 +1,19 @@
+.parallax {
+    /*  code from https://blog.logrocket.com/create-parallax-scrolling-css/ */
+  /* The image used */
+  background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  /* dimensions are important, ensure it is tall enough to scroll */ 
+  min-height: 100vh;
+
+  /* you are free to lay out the container items with flexbox or whatever means you wish */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  
