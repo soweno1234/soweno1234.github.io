@@ -33,10 +33,57 @@
 
 <div class="parallax"></div>
 
-<div style="height:400px;background-color:beige;font-size:36px">
-<h2 style="text-align: center;">Hope you enjoy!</h2>
+<div style="height:700px;background-color:beige;font-size:36px">
+<h2 style="text-align: center;">First you want to implement the following code into your CSS:</h2>
+
+<p style="font-size: 22px; margin-left: 20px;">
+<code>.parallax-container { 
+  <br>
+    background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+    <br>background-attachment: fixed;
+    <br> background-position: center;
+    <br> background-size: cover;
+    <br><br>
+
+    <br> min-height: 100vh;
+  
+    <br><br> 
+    <br> display: flex;
+    <br> flex-direction: column;
+    <br> align-items: center;
+    <br> justify-content: center;</code> 
+</p>
+
 
 </div>
+<div class="parallax"></div>
+
+<div style="height:700px;background-color:beige;font-size:36px"> 
+
+<h2 style="text-align: center;">Once you do this, make sure to include CSS for mobile versions to ensure it is compatibile:</h2>
+
+<p style="font-size: 22px; margin-left: 20px;">
+<code>
+  @media only screen and (max-device-width: 1366px) {<br>
+       .parallax-container {<br>
+    background-attachment: scroll;<br>
+      }<br>
+  } 
+</code>
+</p>
+</div>
+
+<div class="parallax"></div>
+<div style="height:300px;background-color:beige;font-size:36px"> 
+
+  <h2 style="text-align: center; margin-left: 10px; margin-right: 10px;">For the HTML, make sure to include the parallax class for each div</h2>
+  
+  <p style="font-size: 22px; margin-left: 20px;">
+  <code>
+    &lt;div class="parallax"></div>
+  </code>
+  </p>
+  </div>
 
 <div class="parallax"></div>
 
