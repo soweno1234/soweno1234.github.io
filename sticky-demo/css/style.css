@@ -1,32 +1,14 @@
 * {
     box-sizing: border-box;
+    /* border-box, make sure that we push within the div rather than pushing away from the div */
 }
+
+
+/* Star stands for everything */
 
 body {
     color: grey;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-.a1{
-    font-family: 'Courier New', Courier, monospace;
-    color: red;
-}
-
-.a2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: blue;
-}
-
-.a3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: green;
-}
-
-.a4 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: yellow;
 }
 
 .nav {
@@ -50,6 +32,7 @@ body {
     float: left;
     width: 30%;
     padding: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .logo p {
@@ -67,20 +50,14 @@ nav a {
     margin-left: 10px;
     text-decoration: none;
     color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 .header {
     background-color: darkgray;
     color: white;
     text-align: center;
-    border-style: solid;
     padding: 10px;
-}
-
-img {
-    height: auto;
-    width: 80%;
-    border-radius: 20px;
 }
 
 .left {
@@ -92,7 +69,9 @@ img {
     background-color: darkgray;
     color: white;
     text-decoration: none;
+    /* don't underline */
     display: block;
+    /* puts them top to bottom */
     padding: 8px;
     margin-top: 10px;
     text-align: center;
@@ -103,6 +82,8 @@ img {
     float: left;
     width: 60%;
     padding: 0 20px;
+    /* top and bottom 9 
+    and left and right is the 20 pixels  */
 }
 
 .right {
@@ -114,20 +95,19 @@ img {
     margin: 10px 0;
 }
 
-
 .footer {
     background-color: darkgrey;
     color: white;
     padding: 10px;
     float: bottom;
     clear: both;
+    /* If you see a float in the code and don't ignore it */
 }
 
 footer {
     width: 60%;
     margin: 0 auto;
 }
-
 
 @media(min-width:621px) and (max-width:1000px) {
     .main {
@@ -138,15 +118,10 @@ footer {
     }
 }
 
-
 @media only screen and (max-width:620px) {
     .left,
     .main,
-    .right{
+    .right {
         width: 100%;
-    }
-    img {
-        height: auto;
-        width: 80%;
     }
 }
