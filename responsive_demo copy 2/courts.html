@@ -8,7 +8,7 @@
     <title>Tennis Surfaces</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         
 .main {
@@ -106,12 +106,16 @@
         <div class="header">
             <h1>Different Tennis Surfaces</h1>
         </div>
-        <div class="nav">
-            <a class="nav1" href="index.html">Home</a>
-            <a class="nav1" href="courts.html">Tennis Surfaces</a>
-            <a class="nav1" href="rules.html">The Rules</a>
+         <!--I got this code from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
+         <div class="topnav" id="myTopnav">
            
-        </div>
+            <a href="courts.html" class="active">Tennis Courts</a>
+            <a href="index.html" >Home</a>
+            <a href="rules.html">Rules</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+          </div>
 <br>
 
 
@@ -180,6 +184,19 @@
     <div class="footer">
         <footer>Soren Ghorai &copy; 2023</footer>
     </div>
+
+<!--I got this from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
+<script>
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
 </body>
 
 </html>
