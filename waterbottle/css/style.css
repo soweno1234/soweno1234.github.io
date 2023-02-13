@@ -1,0 +1,29 @@
+h2 {
+    font-family: "usual", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: none;
+}
+
+button {
+    font-family: "usual", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.button {
+    background-color: #324556;
+    color: white;
+
+    
+    text-align: center;
+    display: inline-block;
+    font-size: 22px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 2px solid #324556;
+    height: 50px;
+    width: 170px;
+}
+
