@@ -13,74 +13,11 @@
 
 <body>
     <div class="bg-light">
-        <h3 class="ms-4 py-3 text-muted">Stan's Tutorial</h3>
+        <h3 class="ms-4 py-3 text-muted">Soren's Tutorial of Stan</h3>
     </div>
-    <h1 class="text-center mt-3"> How to create a animated grid</h1>
-    <div class="container px-5">
-        <div class="grid mt-5">
-            <div class="left"></div>
-            <div class="right"></div>
-        </div>
-    </div>
-    <div class="text-center mt-5">
-        <h3>First create grid system</h3>
-        <div>
-            <pre>
-                <code>
-&lt;div class="grid mt-5"&gt;
-&lt;div class="left"&gt;&lt;/div&gt;
-&lt;div class="right"&gt;&lt;/div&gt;
-&lt;/div&gt;
-                </code>
-            </pre>
-        </div>
-        <h3> Then the css for the grid
-        </h3>
-       <pre>
-  <code>
-.left {
-  background: lightblue;
-}
+    <h1 class="text-center mt-3"> This is me doing Stan's Demo</h1>
+ 
 
-.right {
-  background: lightblue;
-}
-
-.grid {
-  height: 50vh;
-  background: lightcoral;
-  gap: 3px;
-  display: grid;
-}
-  </code>
-</pre>
-
-<h3> Now for the transition
-</h3>
-<p>There is a new class called .grid:has(.left:hover)</p>
-<p>In plain English this is saying, “Do something to the .grid container if it contains an element named .left inside of it that is in a hover state.”</p>
-<p>This allows for the grid transition to happen</p>
-<p>We will also add an transition time and template to the grid</p>
-
-<pre>
-    <code>
-.grid:has(.left:hover) {
-grid-template-columns: 50% auto;
-}
-.left:hover {
-background-color: lightcoral;
-}
-.grid {
-    height: 50vh;
-    background: lightcoral;
-    gap: 3px;
-    transition: 400ms;
-    display: grid;
-    grid-template-columns: 48px auto;
-}
-    </code>
-  </pre>
-  <h3>This is the result</h3>
   <div class="container px-5">
     <div class="grid mt-5">
         <div class="left">
@@ -136,12 +73,15 @@ background-color: lightcoral;
             </div>
         </div>
         
+
+
         <div class="right"><h2 class="display-1 justify-content-y mt-5 pt-5 text-white" style="font-family: Arial, Helvetica, sans-serif;">
-=        </h2></div>
-        
+        </h2></div>
+
     </div>
 </div>
     </div>
+    <h1 style="font-size: 20px; margin-left: 160px; margin-top: 30px;"> This is really cool! I will most likely incorporate this into my final as well. </h1>
 </body>
 
 </html>
