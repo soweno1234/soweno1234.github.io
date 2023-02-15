@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg-light">
+        <h3 class="ms-4 py-3 text-muted">Stan's Tutorial</h3>
+    </div>
+    <h1 class="text-center mt-3"> How to create a animated grid</h1>
+    <div class="container px-5">
+        <div class="grid mt-5">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <h3>First create grid system</h3>
+        <div>
+            <pre>
+                <code>
+&lt;div class="grid mt-5"&gt;
+&lt;div class="left"&gt;&lt;/div&gt;
+&lt;div class="right"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <h3> Then the css for the grid
+        </h3>
+       <pre>
+  <code>
+.left {
+  background: lightblue;
+}
+
+.right {
+  background: lightblue;
+}
+
+.grid {
+  height: 50vh;
+  background: lightcoral;
+  gap: 3px;
+  display: grid;
+}
+  </code>
+</pre>
+
+<h3> Now for the transition
+</h3>
+<p>There is a new class called .grid:has(.left:hover)</p>
+<p>In plain English this is saying, “Do something to the .grid container if it contains an element named .left inside of it that is in a hover state.”</p>
+<p>This allows for the grid transition to happen</p>
+<p>We will also add an transition time and template to the grid</p>
+
+<pre>
+    <code>
+.grid:has(.left:hover) {
+grid-template-columns: 50% auto;
+}
+.left:hover {
+background-color: lightcoral;
+}
+.grid {
+    height: 50vh;
+    background: lightcoral;
+    gap: 3px;
+    transition: 400ms;
+    display: grid;
+    grid-template-columns: 48px auto;
+}
+    </code>
+  </pre>
+  <h3>This is the result</h3>
+  <div class="container px-5">
+    <div class="grid mt-5">
+        <div class="left">
+            <div class="row row-cols-3">
+                <div class="col-2 ms-2">
+                    <div class="ms-1">
+                    <i class="bi bi-instagram text-white" style="font-size: 1.65rem;"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <p class="ms-3 text-white mt-1 fs-5">Instagram</p>
+                </div>
+            </div>
+            <div class="row row-cols-3">
+                <div class="col-2 ms-2">
+                    <div class="ms-1">
+                    <i class="bi bi-snapchat text-white" style="font-size: 1.65rem;"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <p class="ms-3 text-white mt-1 fs-5">Snapchat</p>
+                </div>
+            </div>
+            <div class="row row-cols-3">
+                <div class="col-2 ms-2">
+                    <div class="ms-1">
+                    <i class="bi bi-facebook text-white" style="font-size: 1.65rem;"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <p class="ms-3 text-white mt-1 fs-5">Facebook</p>
+                </div>
+            </div>
+            <div class="row row-cols-3">
+                <div class="col-2 ms-2">
+                    <div class="ms-1">
+                    <i class="bi bi-linkedin text-white" style="font-size: 1.65rem;"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <p class="ms-3 text-white mt-1 fs-5">Linkedin</p>
+                </div>
+            </div>
+            <div class="row row-cols-3">
+                <div class="col-2 ms-2">
+                    <div class="ms-1">
+                    <i class="bi bi-whatsapp text-white" style="font-size: 1.65rem;"></i>
+                </div>
+                </div>
+                <div class="col">
+                    <p class="ms-3 text-white mt-1 fs-5">Whatsapp</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right"><h2 class="display-1 justify-content-y mt-5 pt-5 text-white" style="font-family: Arial, Helvetica, sans-serif;">
+=        </h2></div>
+        
+    </div>
+</div>
+    </div>
+</body>
+
+</html>
