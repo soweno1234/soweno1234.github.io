@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATER-H - Coolers</title>
+
+
+
+    <!--Bootstrap links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+
+
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/qow0jgb.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script href="../js/script.js"></script>
+
+    <style>
+        .info {
+            line-height: 2;
+        }
+
+        .title {
+             position: relative; 
+             top: 15%; 
+             color: white; 
+             margin-left: 5%;        
+        }
+
+        /* folllwing code from here: https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive*/
+        div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+  .title {
+    color: black;
+    position: relative;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+            position: relative;
+            color: hsl(0, 0%, 68%);
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 5px;
+            overflow: hidden;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            white-space: nowrap;
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+            
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 90%;
+            }
+        }
+        
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: hsl(0, 0%, 80%);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+    </style>
+    <link rel="icon" type="image/x-icon" href="../Images/browse_icon.JPG">
+    <!-- from the site: https://www.w3schools.com/html/html_favicon.asp-->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 250px; max-height: 80px;"></a>
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+
+        <div  class="topnav" id="myTopnav" class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Shop Now</span></button>
+                </li>
+                <li class="nav-item active">
+                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>About Us</span></button>
+                </li>
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Bottles</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='coolers.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Coolers & More</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='process.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Process</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Contact Us</span></button>
+                </li>
+                <li class="nav-item active">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a> </li>
+                
+            </ul>
+        </div>
+        <br>
+    </nav>
+
+   
+
+<div style="height: 300px; width: 100%; background-color: lightblue;"><h1 class="title" style="margin-bottom: 20px;"><h1 style=" font-size: 50px; color: white; margin-left: 50px;">Coolers & More</h1><h2 class="title" style="margin-right: 65%;">Bring all the food and drinks with insulated soft coolers and lunchboxes</h2></div>
+
+
+<br>
+<div style="margin-left: 40px; margin-right: 40px;">
+<div class="responsive">
+    <div class="gallery">
+        <img src="images/cooler1.jpg" alt="Cinque Terre" width="600" height="400">
+      <div class="desc">20 L Day Escape™ Pack - Talus</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+        <img src="images/cooler2.jpg" alt="Forest" width="300" height="200">
+      <div class="desc">20 L Day Escape™ Pack - Peppercorn</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+        <img src="images/cooler3.jpg" alt="Northern Lights" width="300" height="200">
+      <div class="desc">12 L Carry Out™ Soft Cooler - Baltic</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+        <img src="images/cooler4.jpg" alt="Mountains" width="300" height="200">
+      <div class="desc">12 L Carry Out™ Soft Cooler - Cactus</div>
+    </div>
+  </div>
+
+
+
+
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/cooler5.jpg" alt="Cinque Terre" width="600" height="400">
+      <div class="desc">12 L Carry Out™ Soft Cooler - Blackberry</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/cooler6.jpg" alt="Forest" width="300" height="200">
+      <div class="desc">12 L Carry Out™ Soft Cooler - Peppercorn</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box1.jpg" alt="Northern Lights" width="300" height="200">
+      <div class="desc">Kids Lunch Box Limited Edition - Peony</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box2.jpg" alt="Mountains" width="300" height="200">
+      <div class="desc">Kids Lunch Box Limited Edition - Firefly</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box3.jpg" alt="Cinque Terre" width="600" height="400">
+      <div class="desc">Kids Lunch Box Limited Edition - Canary</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box4.jpg" alt="Forest" width="300" height="200">
+      <div class="desc">Large Lunch Box Trail Series™ - Blackberry</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box5.jpg" alt="Northern Lights" width="300" height="200">
+      <div class="desc">Large Lunch Box Trail Series™ - Peppercorn</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery" style="margin-top: 20px;">
+        <img src="images/box6.jpg" alt="Mountains" width="300" height="200">
+      <div class="desc">5 Liter Insulated Lunch Bag - Blackberry</div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+  <div class="clearfix"></div>
+
+</div>
+
+<br>
+<br>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="#"><img src="images/facebook.png" style="width: 130%;"></a>
+        <a href="#"><img src="images/instagram.png" style="width: 85%; margin-left: 10px;"></a>
+        <a href="#"><img src="images/pinterest.png" style="width: 90%; margin-left: 13px;"></a>
+
+    </div>
+
+    <div class="footer-left">
+
+        <p class="footer-links">
+            <a class="link-1" href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="gallery.html">Bottles</a>
+
+            <a href="coolers.html">Coolers & More</a>
+            <a href="process.html">Process</a>
+            <a href="contact.html">Contact Us</a>
+
+        </p>
+
+        <p>WaterH &copy; 2015</p>
+    </div>
+
+</footer>
+
+
+
+</body>

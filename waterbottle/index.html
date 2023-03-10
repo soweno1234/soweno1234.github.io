@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script href="../js/script.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .info {
             line-height: 2;
@@ -34,30 +34,113 @@
              color: white; 
              margin-left: 5%;        
         }
+
+    @media (min-width: 621px) and (max-width: 1000px) {
+    
+    
+    img {
+        width: 130%;
+        height: 80%;
+        margin-bottom: -100px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .first {
+        width: 0px;
+    }
+}
+
+h1 {
+            position: relative;
+            color: hsl(0, 0%, 68%);
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 5px;
+            overflow: hidden;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            white-space: nowrap;
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+            
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 90%;
+            }
+        }
+        
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: hsl(0, 0%, 80%);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+
+
+
+
+
     </style>
     <link rel="icon" type="image/x-icon" href="../Images/browse_icon.JPG">
     <!-- from the site: https://www.w3schools.com/html/html_favicon.asp-->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg ">
 
-        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 365px; max-height: 80px;"></a>
+        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 250px; max-height: 80px;"></a>
         <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 
 
-        <div class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
+        <div  class="topnav" id="myTopnav" class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
              
                 <li class="nav-item active">
-                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>Shop Now</span></button>
+                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Shop Now</span></button>
                 </li>
                 <li class="nav-item active">
-                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>About Us</span></button>
+                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>About Us</span></button>
+                </li>
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Bottles</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='coolers.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Coolers & More</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='process.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Process</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Contact Us</span></button>
                 </li>
                 <li class="nav-item active">
-                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>Contact Us</span></button>
-                </li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a> </li>
+                
             </ul>
         </div>
         <br>
@@ -73,16 +156,17 @@
 
 <div class="container">
         
-        <div class="row">
+   
+        <div class="row ">
             <div class="col-md-1"></div>
             <div class="col-md-5">
                 <img src="images/waterpic1.png" width="128%" height="89.15%" style="margin-top: 30px; margin-left:-119px;">
-                </div>
-            <div class="col-md-6" style="margin-top: 30px; margin-left: -10px; height: 534.5px; background-color: #efedea;">
+            </div>
+            <div class="col-md-6 first" style="margin-top: 30px; margin-left: -10px; height: 534.5px; background-color: #efedea;">
                 <div class="info">
                     <h2 style="margin-top: 120px; position:relative; left: 15%; font-size: 40px; margin-left: 0px;">Track Your <br> Water Intake</h2>
                     <p style="margin-top: 20px; position:relative; left: 15%; font-size: 18px; margin-right: 200px;">The sensor inside WaterH automatically tracks your exact level of hydration, and you can see all your data in the easy-to-use WaterH app.</p>
-                    <button onclick="location.href='order.html';" style="margin-top: 10px; position:relative; left: 15%;" class="button order"><span>Shop Now</span></button>
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; left: 15%;" class="button order"><span>Shop Now</span></button>
                 </div>
             </div>
             
@@ -97,7 +181,7 @@
                 <div class="info">
                     <h2 style="margin-top: 120px; position:relative; left: -13%; font-size: 40px; margin-left: 0px; text-align: right;">Get A Reminder</h2>
                     <p style="margin-top: 20px; position:relative; left: -13%; font-size: 18px; margin-left: 100px; text-align: right;">The 360° LED Hydration Reminder gives you a visual cue when it's time to take your next sip. Customize the reminder in the WaterH app for that personal touch.</p>
-                    <button onclick="location.href='order.html';" style="margin-top: 13px; position:relative; left: 55%;" class="button order"><span>Shop Now</span></button>
+                    <button onclick="location.href='gallery.html';" style="margin-top: 13px; position:relative; left: 55%;" class="button order"><span>Shop Now</span></button>
                 </div>
             </div>
 
@@ -116,7 +200,7 @@
                 <div class="info">
                     <h2 style="margin-top: 120px; position:relative; left: 15%; font-size: 40px; margin-left: 0px;">Make Sure It's Safe</h2>
                     <p style="margin-top: 20px; position:relative; left: 15%; font-size: 18px; margin-right: 200px;">WaterH is equipped with a built-in TDS (Total Dissolved Solids) meter so you can know exactly what's in your bottle.</p>
-                    <button onclick="location.href='order.html';" style="margin-top: 10px; position:relative; left: 15%;" class="button order"><span>Shop Now</span></button>
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; left: 15%;" class="button order"><span>Shop Now</span></button>
                 </div>
             </div>
             
@@ -150,10 +234,15 @@
                 <a class="link-1" href="index.html">Home</a>
 
                 <a href="about.html">About Us</a>
+    
+                <a href="gallery.html">Bottles</a>
+    
+                <a href="coolers.html">Coolers & More</a>
 
+                <a href="process.html">Process</a>
+    
                 <a href="contact.html">Contact Us</a>
-
-
+    
             </p>
 
             <p>WaterH &copy; 2015</p>

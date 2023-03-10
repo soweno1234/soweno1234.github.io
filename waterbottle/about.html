@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vbf8nix.css">
+    
     <!--font-->
     <link rel="stylesheet" href="https://use.typekit.net/qow0jgb.css">
 
@@ -32,33 +37,120 @@
              position: relative; 
              top: 15%; 
              color: white; 
-             margin-left: 5%;        
+             margin-left: 5%;   
+             position: relative;
+            color: hsl(0, 0%, 68%);
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 5px;
+            overflow: hidden;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            white-space: nowrap;
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+                  
         }
+
+        h1 {
+            position: relative;
+            color: hsl(0, 0%, 68%);
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 5px;
+            overflow: hidden;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            white-space: nowrap;
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+            
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 90%;
+            }
+        }
+        
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: hsl(0, 0%, 80%);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+
+        @media (min-width: 621px) and (max-width: 1000px) {
+    
+    
+    img {
+        width: 50%;
+        height: 80%;
+      
+    }
+
+    h2 {
+        margin-top: 100px;
+    }
+
+}
+  
+   
+
     </style>
     <link rel="icon" type="image/x-icon" href="../Images/browse_icon.JPG">
     <!-- from the site: https://www.w3schools.com/html/html_favicon.asp-->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </head>
 
 <body>
   
     <nav class="navbar navbar-expand-lg ">
 
-        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 365px; max-height: 80px;"></a>
+        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 250px; max-height: 80px;"></a>
         <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 
-
-        <div class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
+        <div  class="topnav" id="myTopnav" class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
              
                 <li class="nav-item active">
-                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>Shop Now</span></button>
+                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Shop Now</span></button>
                 </li>
                 <li class="nav-item active">
-                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>About Us</span></button>
+                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>About Us</span></button>
+                </li>
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Bottles</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='coolers.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Coolers & More</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='process.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Process</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Contact Us</span></button>
                 </li>
                 <li class="nav-item active">
-                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 100px;" class="button order"><span>Contact Us</span></button>
-                </li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a> </li>
+                
             </ul>
         </div>
         <br>
@@ -66,7 +158,7 @@
     <hr>
     <br>
 
-<h1 class="title" style="margin-bottom: 20px;"><h1 style=" font-size: 40px; color: black; margin-left: 120px;">Our Mission and Values</h1><h4 class="title" style="margin-right: 65%;">WaterH is the smart water bottle that tracks your intake and reminds you when to drink.</h4></div>
+<h1 class="title" style="margin-bottom: 20px;"><h1 style=" font-size: 40px; color: black; margin-left: 120px;">Our Mission and Values</h1><h4 class="" style="margin-right: 65%; color: white;">WaterH is the smart water bottle that tracks your intake and reminds you when to drink.</h4></div>
 
 
 
@@ -83,7 +175,7 @@
            
 
             <div class="col-md-12">
-                <img src="images/aboutus.png" width="100%" height="80%" style="margin-top: 5px; margin-left: -5px;">
+                <img  src="images/aboutus.png" width="100%" height="80%" style="margin-top: 5px; margin-left: -5px;">
               </div>
 
         </div>
@@ -176,9 +268,13 @@
                 <a class="link-1" href="index.html">Home</a>
 
                 <a href="about.html">About Us</a>
-
+    
+                <a href="gallery.html">Bottles</a>
+    
+                <a href="coolers.html">Coolers & More</a>
+                <a href="process.html">Process</a>
                 <a href="contact.html">Contact Us</a>
-
+    
 
             </p>
 

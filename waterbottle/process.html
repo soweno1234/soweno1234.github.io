@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATER-H</title>
+
+
+
+    <!--Bootstrap links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script href="../js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="../Images/browse_icon.JPG">
+
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/qow0jgb.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script href="../js/script.js"></script>
+
+    <style>
+        .info {
+            line-height: 2;
+        }
+
+        .title {
+             position: relative; 
+             top: 15%; 
+             color: white; 
+             margin-left: 5%;        
+        }
+        .jumbotron p {
+            margin: 15px;
+        }
+
+        .jumbotron {
+            background-color: white;
+            height: 100%;
+            padding: 15px;
+        }
+
+        .carousel {
+            border: 4px double red;
+            max-width: 600px;
+            margin: 30px;
+        }
+
+        .carousel-item,
+        .carousel-item:hover {
+            background-color: white;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            height: 100px;
+            width: 100px;
+            background-size: 100%, 100%;
+            border-radius: 50%;
+            background-image: none;
+        }
+
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 50px;
+            color: red;
+        }
+
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 50px;
+            color: red;
+        }
+
+        .jumbotron .row {
+            padding: 60px 10px 10px 30px;
+        }
+
+        .carousel-indicators li {
+            background-color: red;
+        }
+
+        .carousel-indicators li:hover {
+            background-color: red;
+        }
+        h1 {
+            position: relative;
+            color: hsl(0, 0%, 68%);
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 5px;
+            overflow: hidden;
+            border-right: 2px solid hsl(0, 0%, 80%);
+            white-space: nowrap;
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+            
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 90%;
+            }
+        }
+        
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: hsl(0, 0%, 80%);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+    </style>
+    <link rel="icon" type="image/x-icon" href="../Images/browse_icon.JPG">
+    <!-- from the site: https://www.w3schools.com/html/html_favicon.asp-->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" alt="LOGO HERE" style="width: 250px; max-height: 80px;"></a>
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+        <div  class="topnav" id="myTopnav" class="collapse navbar-collapse collapsibleNavBar" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='index.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Shop Now</span></button>
+                </li>
+                <li class="nav-item active">
+                    <button onclick="location.href='about.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>About Us</span></button>
+                </li>
+             
+                <li class="nav-item active">
+                    <button onclick="location.href='gallery.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Bottles</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='coolers.html';" style="margin-top: 10px; position:relative; margin-left: 00px;" class="button order"><span>Coolers & More</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='process.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Process</span></button>
+                </li>
+
+                <li class="nav-item active">
+                    <button onclick="location.href='contact.html';" style="margin-top: 10px; position:relative; margin-left: 0px;" class="button order"><span>Contact Us</span></button>
+                </li>
+                <li class="nav-item active">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a> </li>
+                
+            </ul>
+        </div>
+        <br>
+    </nav>
+
+   
+
+<div style="height: 300px; width: 100%; background-color: lightblue;"><h1 class="title" style="margin-bottom: 20px;"><h1 style=" font-size: 50px; color: white; margin-left: 50px;">How are our bottles made?</h1><h4 class="title" style="margin-right: 65%;">Learn about the process that goes into each and every water bottle</h4></div>
+
+
+
+
+
+
+        <div style="margin-left: 450px;">
+            <div style="text-align:center">
+                <h2 style="padding-top:40px; margin-left: -450px; font-size: 30px;">Our Design Process</h2>
+                <div style="margin-left: -70px;" id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                    <ol class="carousel-indicators">
+
+                        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+
+                        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+
+                        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+
+                        <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+
+                        <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+
+
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <br>
+
+                            <div class="jumbotron">
+
+                                <div >
+
+                                    <div >
+
+                                        <img src="images/design1.png"  >
+                            
+                                    </div>
+
+                                    <div >
+
+                                        <p>Small plastic pellets are put into a funnel-shaped contraption called a hopper.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <br>
+
+                            <div class="jumbotron">
+
+                                <div >
+
+                                    <div >
+
+                                        <img src="images/design2.png"  >
+
+                                    </div>
+
+                                    <div >
+                                        <p>The pellets are flushed out of the hopper and mixed with a colored dye in the intended color of the water bottle.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <br>
+
+                            <div class="jumbotron">
+
+                                <div >
+
+                                    <div >
+
+                                        <img src="images/design3.png"  >
+                                    </div>
+
+                                    <div >
+
+                                        <p>The dyed pellets are then pushed through a heated tube at about 150 to 350°F, which melts them down into a moldable goo.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <br>
+
+                            <div class="jumbotron">
+
+                                <div >
+
+                                    <div >
+
+                                        <img src="images/design4.png"  >
+
+                                    </div>
+
+                                    <div >
+                                        <p>The goo is then injected into molds that are in the shape of your water bottle and cooled down to harden.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <br>
+
+                            <div class="jumbotron">
+
+                                <div >
+
+                                    <div >
+
+                                        <img src="images/design5.png"  >
+
+                                    </div>
+
+                                    <div >
+
+                 
+
+                                        <p>After they're removed from the mold, the sports bottles are only small plastic cones without their distinct shape. They have to go through another round of molding before they're complete.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                            <span class="sr-only">Previous</span>
+
+                        </a>
+
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                            <span class="sr-only">Next</span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>  
+
+    </div>
+
+  
+</div>
+
+<p style="margin-left: 80px; margin-right: 50px; font-size: 20px;">Designing a successful product, such as a water bottle, typically involves researching the target audience and their needs, generating ideas, and refining designs through feedback and testing. Material selection and manufacturing processes are chosen to align with the company's values and sustainability goals. The final product is launched and marketed through various channels, including the company's website. Ongoing evaluation and improvement of the product design and manufacturing processes are necessary to ensure the product's continued success. Overall, the design process involves a thorough understanding of the user's needs, creativity in generating ideas, attention to functionality and aesthetics, and a commitment to sustainability.</p>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="#"><img src="images/facebook.png" style="width: 130%;"></a>
+            <a href="#"><img src="images/instagram.png" style="width: 85%; margin-left: 10px;"></a>
+            <a href="#"><img src="images/pinterest.png" style="width: 90%; margin-left: 13px;"></a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+    
+                <a href="gallery.html">Bottles</a>
+    
+                <a href="coolers.html">Coolers & More</a>
+                <a href="process.html">Process</a>
+    
+                <a href="contact.html">Contact Us</a>
+    
+            </p>
+
+            <p>WaterH &copy; 2015</p>
+        
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
